@@ -1,3 +1,4 @@
+
 // spread operators: unpack an iterable array as comma seperated values
 const add = (a,b)=>( // a,b are parameters
     console.log(a+b) // 4
@@ -79,10 +80,6 @@ Output:
 // Asynchronous end
 
 
-
-
-
-
 const myPromise =()=>(
     new Promise((resolveFunction,rejectFunction)=>(
         setTimeout(()=>(
@@ -162,7 +159,7 @@ in the resulting array
 */
 const textValue = "I'm a MERN stack developer-Hyderabad-Native Place is Mncl"
 console.log(textValue.split("-"))// [ "I'm a MERN stack developer", 'Hyderabad', 'Native Place is Mncl' ]
-console.log(text.split("-",1)) // [ "I'm a MERN stack developer" ]
+console.log(textValue.split("-",1)) // [ "I'm a MERN stack developer" ]
 
 
 const replaceText = "I'm a MERN stack developer-Hyderabad-Native Place is Mncl"
@@ -171,7 +168,8 @@ console.log(replaceText.replace("MERN stack","Web")) // I'm a Web developer-Hyde
 
 /*
 includes()
-The includes() method determines whether a string contains the characters of a specified string.
+The includes() method determines whether a 
+string contains the characters of a specified string.
 
 It returns true if the string contains the value, otherwise it returns false.
 
@@ -291,3 +289,149 @@ const reverseOfNums = [11, 21, 31, 41, 51];
 const reverseOf = reverseOfNums.reverse()
 console.log(reverseOfNums) // [ 51, 41, 31, 21, 11 ]
 console.log(reverseOf)// [ 51, 41, 31, 21, 11 ]
+
+
+const fruitsValue = ["Banana", "Orange", "Apple", "Mango"];
+// At position 2,delete 1 element and  add 2 elements: 
+fruitsValue.splice(2, 1, "Lemon", "Kiwi");
+console.log(fruitsValue)
+
+
+console.log(typeof NaN) // number
+
+// if "+" is used concatenate will done, if remaining like  -,*,/ the math will be used
+console.log(typeof (7+"5")) // string
+
+
+
+
+const f = [1,2,4,6,7,8]
+const findElement=f.find((element)=>(
+    element===7
+))
+console.log(findElement)
+
+
+const fel = [1,2,4,6,7,8]
+const findIndexVal=fel.findIndex((element)=>(
+    element===8
+))
+console.log(findIndexVal) // 5
+
+
+
+
+
+
+const outer = (name)=>{ // closure has access to outer function parameter
+    const greet = "Hi" // closure has access to outer function scope
+    return ()=>{
+        console.log(greet,"greet") // Hi greet
+        console.log(name,"name") // Rohith name
+    }
+}
+const result =  outer("Rohith")
+console.log(result) // [Function (anonymous)]
+result()
+
+
+
+// call and apply are used to set context of this during function call
+// bind is used to set context of this during defining function expression
+const func = function(){
+    console.log(this)
+}
+func()
+
+
+/* event loop :
+-event loop is responsible asynchronous programming in js
+-event loop is a program which runs continously until the page closes
+-tiny component in js runtime
+-in js an activity is done continously then it is known as event loop
+*/
+
+// currying functions
+const addFunctionCurrying = x => y =>console.log(x+y)
+const add20 = addFunctionCurrying(20)
+add20(100) // 120
+const add50 = addFunctionCurrying(50)
+add50(100) // 150
+
+ 
+//higher order function: a fubction which accepts another function as an argument, ex:- map(),reduce()
+
+// event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
+
+// strict mode: useful for writing js in more secure manner, it prevents bugs from happening and throw exception errors
+
+console.log(typeof null)// object
+console.log(typeof NaN)// number
+console.log(typeof undefined) // undefined
+
+// Ajax: asynchronous javascript xml, we can send data to server and get data without refreshing page
+
+// dom: document object model, which can change content,style,structure of web page by using js ex:todo list
+
+/* box model: wraps around every html elements
+margin:- area outside the border
+border:- goes around padding and content
+padding :- area around the content
+content :- text and image appears
+*/
+
+/*
+css sprite:combine multiple images in to one single larger image,
+without css sprite each image send as individual server request
+*/
+
+/*
+css preprocessors:more readable
+Sass
+{less}
+*/
+
+/*
+css specificity:
+style attribute,id,class name,elements
+*/
+
+/*
+visibility:none --> hides element but occupies space
+display:none -->hides element but not occupies space
+*/
+
+/*
+box-sizing:border-box -->elemenates a number od pitfalls while laying out of your content
+*/
+
+/*
+pseudo element:-
+allows you to select and manipulate parts of element
+*/
+
+
+/*
+Pseudo-class example:-
+a:hover {
+    color: red;
+  }
+*/
+
+/*
+flexbox: 1D layout to create either row or column layout
+grid: 2D layout that can handle both row and column layout
+*/ 
+
+/*
+semantic tags:-header tags,nav tags read by search engines
+meta tags:-describes what the web page is about
+*/
+
+/*
+web workers:page->server->database
+*/
+
+/*
+data-attributes
+*/
