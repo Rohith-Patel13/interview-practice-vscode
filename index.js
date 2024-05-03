@@ -599,3 +599,228 @@ feature of HTML that allow you to attach custom metadata to
 any HTML element, providing additional information that can 
 be easily accessed and manipulated using JavaScript.
 */
+
+
+/*
+Unit testing is a software development process in which the smallest testable parts
+of an application, called units, are individually scrutinized for proper operation. 
+Software developers and sometimes QA staff complete unit tests during the development process.
+*/
+
+
+/*
+Js provides multi-line string or not?
+-yes js provide multi-line string in 3 ways:
+1)using backtrick 2)using + operator i.e by concatenating 3)using \(backslash)
+
+
+// in below example when i use multi-line string it is not working
+const str = "hi im rohith
+appala"  
+
+*/
+const strBacktrick = `hi im rohith
+appala
+from hyderabad
+`
+const strConcatenate = str+"rohith"
+
+
+var alphabets = ["a","b","b","c","d","e"]
+delete alphabets[2] 
+console.log(alphabets) // [ 'a', 'b', <1 empty item>, 'c', 'd', 'e' ]
+console.log(alphabets.length) // 6
+
+
+/*
+Break statement is used to comeout of current loop
+
+The continue statement continues the current
+loop with a new recurrence
+*/
+// continue example:-
+const continueExampleNums = [1,2,3,4,56,7,8,9]
+for (const i of continueExampleNums){
+    if (i===56) continue
+    console.log(i)
+}
+/*
+output:-
+1
+2
+3
+4
+7
+8
+9
+*/
+
+
+const breakExampleNums = [1,2,3,4,56,7,8,9]
+for (const i of breakExampleNums){
+    if (i===56){
+        console.log(i) 
+        break
+    } 
+}
+// output:- 56
+
+
+/*
+what are the boolean operators can be used in js?
+-Operators which always result in 
+either true or false are called as
+boolean operators
+examples of boolean operators:-
+-Greater Than >
+-Less Than <
+-The 'And' Operator - &&
+-The 'Not' Operator - !
+*/
+
+
+/*
+is js case sensitive give an example?
+-yes, js is case sensitive
+-for js built-in methods it is camel case
+-example:-
+a function parseInt is not same as the 
+function Parseint
+*/
+
+// event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
+
+/*
+define event bubbling?
+-js allows DOM elements to be nested inside each other,
+-in such a case , if the event handler
+of the child is clicked,the
+handler of parent will also
+work as if it were clicked too,but if you want 
+disable that bubbling up then you 
+have to explicitly mention eventBubbling to false because 
+by default event bubbling is true.
+
+<div>
+   parent
+   <div>
+     child
+     <div onclick="grandChildClicked()">
+       grand child
+     </div>
+   </div>
+
+</div>
+*/
+
+
+/*
+explain window.onload and
+onDocumentReady?
+-onload function will wait
+for all the information on
+the page to be rendered which
+leads to delay because if you
+making multiple asynchronous
+calls or AJAX calls which takes time and so entire
+page should be wait
+
+-In onDocumentReady whenever DOM is loaded,
+this allows early manipulation
+of code
+*/
+
+
+/*
+How are object properties assigned?
+*/
+const obj = {
+    age:1
+}
+obj["name"]="rohith" // bracket notation
+obj.profession="web developer" // dot notation
+console.log(obj) // { age: 1, name: 'rohith', profession: 'web developer' }
+
+
+/*
+what is variable typing?
+-used to assign different
+value of a different/same datatype
+to an already existing variable
+-js is not a strictly typed language
+*/
+let variableTypingExample = 10
+variableTypingExample = "ten"
+console.log(variableTypingExample)// ten
+
+
+/*
+z-index:-
+-using z-index we can place the elements on top of each other
+-z-index default value is 0, can be +ve or -ve
+example:-dashboards in mobile view
+*/
+ 
+
+
+/*
+comments in html:-<!-- -->
+comments in js:- //
+*/
+
+
+/*
+keywords used to handle exception:-
+try{
+
+}catch(exp){
+
+}Finally{
+    Code runs either it finishes successfully or after catch
+}
+*/
+
+
+/*
+why is @import only at the top?
+-to avoid overriding rules
+-for following ranking order
+*/
+
+
+/*
+Doctype in html:-
+Doctype tells browser which version of html
+standard is used and how to render
+the page
+*/
+
+/*
+svg:-
+-scalar vector graphics
+-we can easily customize svg like color,size
+-image doesn't loose quality
+when zoom in or zoom out
+*/
+
+
+/*
+sessionStorage is available
+only when a browser's tab is open 
+ex-user login details
+
+localStorage is available even after closing and opening
+the browser window
+*/
+
+
+/*
+HTML5 new tags:-
+<header>
+<nav>
+<section>
+<footer>
+<aside>
+<article>
+*/
+
