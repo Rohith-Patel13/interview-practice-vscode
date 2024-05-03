@@ -824,3 +824,77 @@ HTML5 new tags:-
 <article>
 */
 
+/*
+table tags:-
+<table> -->define table in html page
+<thead> -->table header
+<tr> --> table row
+<td> --> table column
+<tfoot> --> table footer
+*/
+
+
+/*
+meta data in html:-
+-additional information about web page
+-meta data is very helpful for SEO optimization
+*/
+
+
+/*
+canvas:-
+-easy and powerful way to draw diagrams in html
+-used for drawing graphs,create animations
+-use js for drawing
+*/
+
+
+/*
+web worker:- 
+- a piece of js code runs in background
+- client>server>database
+*/
+
+/*
+various ways to integrate css in web pages:-
+inline method:-<div style="solid red"></div>
+internal method:-:- by using <style></style> tag
+linked method
+*/
+
+
+/*
+css and scss:-
+css:
+-cascading style sheet
+-css is scripting language used for designing web pages
+
+scss:
+-syntactically awesome style sheet is superset of css
+-SCSS have file extension of .scss
+-knowing scss helps you to customize bootstrap 4
+*/
+
+
+console.log(!0)// true
+console.log(!1)// false
+
+
+
+// conditional variables
+const userName = {
+    name:"rohith"
+}
+const conditionalStatement = user.name || ""
+
+
+// convert number in to string
+const numStr = 10+""
+console.log(typeof numStr) // string
+
+
+// convert string in to number
+const Strnum = +"20"
+console.log(typeof Strnum) // number
+
+
