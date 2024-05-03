@@ -1,3 +1,5 @@
+"use strict"
+
 
 // spread operators: unpack an iterable array as comma seperated values
 const add = (a,b)=>( // a,b are parameters
@@ -12,6 +14,7 @@ const log = (...rest)=>( // parameters
     console.log(rest) // [2,2,3]
 )
 log(2,2,3) // here are arguments
+
 
 const logging = (a,b,...rest)=>( // parameters
     console.log(rest) // [3]
@@ -269,7 +272,9 @@ console.log(addNumsEvery) // false
 
 /*
 Immutable method:- some()
-The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+The some() method tests whether at least one element in the 
+array passes the test implemented by the provided function. 
+It returns a Boolean value.
 
 Syntax : array.some(function(currentValue, index, arr))
 */
@@ -303,6 +308,7 @@ console.log(typeof NaN) // number
 console.log(typeof (7+"5")) // string
 
 
+// in javascript the true boolean is 1 and false boolean is 0
 
 
 const f = [1,2,4,6,7,8]
@@ -322,7 +328,6 @@ console.log(findIndexVal) // 5
 
 
 
-
 const outer = (name)=>{ // closure has access to outer function parameter
     const greet = "Hi" // closure has access to outer function scope
     return ()=>{
@@ -333,6 +338,18 @@ const outer = (name)=>{ // closure has access to outer function parameter
 const result =  outer("Rohith")
 console.log(result) // [Function (anonymous)]
 result()
+
+
+
+const outering = (innerFunctionScope)=>{
+    const outerFunctionScope = "outer function scope"
+    return ()=>{
+        console.log(outerFunctionScope) // outer function scope
+        console.log(innerFunctionScope) // closure can access outer function parameter
+    }
+}
+const resulting = outering("closure can access outer function parameter")
+resulting()
 
 
 
@@ -363,20 +380,42 @@ add50(100) // 150
 
 // event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
 
-// strict mode: useful for writing js in more secure manner, it prevents bugs from happening and throw exception errors
+/* 
+-strict mode: useful for writing js in more secure manner, it prevents bugs from happening and throw exception errors
+-"use strict" --> this piece of code should be at top of javascript script file
+-"use strict" --> If this piece of code should not be at the top of javascript script file then strict mode principles not work
+ex:-1:
+"use strict"
+x = 10
+console.log(x)
+output:-
+ReferenceError: x is not defined
+
+ex:-2
+console.log("without strict mode")
+"use strict"
+x = 10
+console.log(x)
+output:-
+without strict mode
+10
+
+*/
 
 console.log(typeof null)// object
 console.log(typeof NaN)// number
 console.log(typeof undefined) // undefined
 
-// Ajax: asynchronous javascript xml, we can send data to server and get data without refreshing page
-
+/* Ajax: -asynchronous javascript xml, we can send data to server and get data without refreshing page
+-initially or in olden days web servers used to send data in XML format
+-but now a days the JSON format is recieving to client as response
+*/
 // dom: document object model, which can change content,style,structure of web page by using js ex:todo list
 
 /* box model: wraps around every html elements
-margin:- area outside the border
+margin:- area or space outside the border
 border:- goes around padding and content
-padding :- area around the content
+padding :- area or space around the content
 content :- text and image appears
 */
 
@@ -395,7 +434,6 @@ Sass
 css specificity:
 style attribute,id,class name,elements
 */
-
 
 /*
 visibility:none --> hides element but occupies space
@@ -513,6 +551,37 @@ grid:
 -we set display property to grid in css file to use grid in to our web application
 -we use grid-template-columns,grid-template-rows to specify positions in 2D
 */ 
+
+
+/*
+
+-The transition property in CSS allows you to control 
+the speed of changes to CSS properties.  
+-The transform property in CSS allows you to modify the appearance 
+and layout of an element in various ways, such as rotating, scaling, 
+skewing, or translating (moving) it. It's a powerful tool for visually 
+transforming elements on a webpage without affecting the layout of 
+surrounding elements.
+- in below example the transition: transform 1s; 
+line specifies that any changes to the transform property (like rotation in this case) 
+should take 1 second to complete.
+
+.box1{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    position: sticky;
+    top: 0px;
+    transition: transform 1s; 
+    cursor: pointer;
+}
+
+.box1:hover{ pseudo class 
+    transform:rotate(45deg) 
+}
+*/
+
+
 
 /*
 semantic tags:-header tags,nav tags read by search engines
