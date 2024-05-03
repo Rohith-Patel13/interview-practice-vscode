@@ -359,7 +359,7 @@ const add50 = addFunctionCurrying(50)
 add50(100) // 150
 
  
-//higher order function: a fubction which accepts another function as an argument, ex:- map(),reduce()
+// higher order function: a fubction which accepts another function as an argument, ex:- map(),reduce()
 
 // event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
 
@@ -396,36 +396,128 @@ css specificity:
 style attribute,id,class name,elements
 */
 
+
 /*
 visibility:none --> hides element but occupies space
 display:none -->hides element but not occupies space
 */
 
 /*
-box-sizing:border-box -->elemenates a number od pitfalls while laying out of your content
+-box-sizing:The box-sizing property allows us to include the padding and border 
+in an element's total width and height.
+-border-box and content-box are the two different values of box-sizing. 
+-content-box: This is the default value of box-sizing. The dimension of element 
+only includes 'height' and 'width' and does not include 'border' and 'padding'
+given to element.Padding and Border take space outside the element.
+-If you set box-sizing: border-box; on an element, padding and border 
+are included in the width and height
+-by using universal selector we specify border-box value for box-sizing property
 */
+
+
 
 /*
 pseudo element:-
-allows you to select and manipulate parts of element
+-allows you to select and manipulate parts of element
+-keyword added after a selector that's
+used to style a specific parts of an element
+
+syntax:- selector::pseudo-element
+
+note:-to get keyboard in vs code click  "windows+;"
+
+examples:
+.wish::first-letter{
+    color: aqua;
+    font-size: 2em;
+}
+.wish-text::first-line{
+    color: red;
+}
+.wish-text::selection{
+    color: aqua;
+}
+
+#sports li::before{
+    content: "🏅";
+}
+
+#ball::after{
+    content: "⚽";
+}
+#bat::after{
+    content: "🏏";
+}
+#shoes::after{
+    content: "👟";
+}
+#sports li::marker{
+    content: "";
+}
 */
 
 
 /*
-Pseudo-class example:-
+Pseudo-classes:-Pseudo-classes are the keywords added to a selector 
+they modify behaviour of an element when they are in a certain state
+and Pseudo-classes are used to create drop down menus.
+
+Pseudo-classes example:-
 a:hover {
     color: red;
   }
+
+-active is pseudo class when an item is currently selected,like when left click the mouse and hold it then the color is red for below example:
+a:active{
+    color:blue
+}
+
+.click-btn:hover{
+    background-color: aquamarine;
+    font-size: 2em;
+}
+.click-btn:active{
+    background-color: rgb(221, 255, 0);
+}
+a:link{
+    color: skyblue;
+}
+a:hover{
+    color: blue;
+    font-size: 1.1em;
+}
+a:visited{
+    color: green;
+} 
+li:hover{
+    background-color: yellow;
+}
+li:not(:hover){
+    background-color: rgb(227, 222, 222);
+}
+
+li:hover:nth-child(odd){
+    background-color: blueviolet;
+}
 */
 
+
 /*
-flexbox: 1D layout to create either row or column layout
-grid: 2D layout that can handle both row and column layout
+flexbox:
+-1D layout to create either row or column layout
+-we set display property to flex in css file to use flexbox in to our web application
+-we use flex-direction,align-items,justify-content to specify positions in 1D
+
+grid: 
+-2D layout that can handle both row and column layout
+-we set display property to grid in css file to use grid in to our web application
+-we use grid-template-columns,grid-template-rows to specify positions in 2D
 */ 
 
 /*
 semantic tags:-header tags,nav tags read by search engines
-meta tags:-describes what the web page is about
+meta tags:-describes what the web page is about, we usually specify 
+meta tags in inside of html head tag
 */
 
 /*
@@ -433,5 +525,8 @@ web workers:page->server->database
 */
 
 /*
-data-attributes
+data-attributes:-Data attributes are a powerful and flexible 
+feature of HTML that allow you to attach custom metadata to 
+any HTML element, providing additional information that can 
+be easily accessed and manipulated using JavaScript.
 */
