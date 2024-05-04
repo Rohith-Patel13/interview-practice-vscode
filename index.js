@@ -228,7 +228,8 @@ fruits.forEach((fruit) => console.log(fruit));
 Immutable method:- filter()
 The filter() method creates a new array filled with all elements that pass the test (provided as a function).
 
-A new array with the elements that pass the test will be returned. If no elements pass the test, an empty array will be returned.
+A new array with the elements that pass the test will be returned.
+If no elements pass the test, an empty array will be returned.
 
 Syntax : array.filter(function(currentValue, index, arr))
 */
@@ -259,7 +260,8 @@ console.log(addNums) // 15
 
 /*
  every()
-The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+The every() method tests whether all elements in the array pass the 
+test implemented by the provided function. It returns a Boolean value.
 
 Syntax : array.every(function(currentValue, index, arr))
 */
@@ -303,6 +305,8 @@ console.log(fruitsValue)
 
 
 console.log(typeof NaN) // number
+console.log(typeof -"9") // number
+console.log(typeof +"9") // number
 
 // if "+" is used concatenate will done, if remaining like  -,*,/ the math will be used
 console.log(typeof (7+"5")) // string
@@ -381,9 +385,11 @@ add50(100) // 150
 // event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
 
 /* 
--strict mode: useful for writing js in more secure manner, it prevents bugs from happening and throw exception errors
+-strict mode: useful for writing js in more secure manner, it prevents bugs from 
+happening and throw exception errors
 -"use strict" --> this piece of code should be at top of javascript script file
--"use strict" --> If this piece of code should not be at the top of javascript script file then strict mode principles not work
+-"use strict" --> If this piece of code should not be at the top of javascript 
+script file then strict mode principles not work
 ex:-1:
 "use strict"
 x = 10
@@ -589,6 +595,7 @@ meta tags:-describes what the web page is about, we usually specify
 meta tags in inside of html head tag
 */
 
+
 /*
 web workers:page->server->database
 */
@@ -605,6 +612,8 @@ be easily accessed and manipulated using JavaScript.
 Unit testing is a software development process in which the smallest testable parts
 of an application, called units, are individually scrutinized for proper operation. 
 Software developers and sometimes QA staff complete unit tests during the development process.
+
+unit testing for js is done by jest library
 */
 
 
@@ -688,7 +697,12 @@ a function parseInt is not same as the
 function Parseint
 */
 
-// event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
+/*
+event delegation: adding an event listener to a single(parent) element and 
+perform actions on child elements if you want instead of attaching event 
+listeners to all elements
+*/
+
 
 /*
 define event bubbling?
@@ -709,7 +723,6 @@ by default event bubbling is true.
        grand child
      </div>
    </div>
-
 </div>
 */
 
@@ -728,6 +741,20 @@ page should be wait
 -In onDocumentReady whenever DOM is loaded,
 this allows early manipulation
 of code
+*/
+
+
+/*
+examples for dom event listener in js:-
+-mouseover: This event is triggered when the mouse pointer moves over the 
+specified element. 
+-click: This event is triggered when the specified element is clicked. 
+-mouseout: This event is triggered when the mouse pointer moves out of the 
+specified element. 
+-resize: This event is triggered when the browser window is resized. 
+-DOMContentLoaded: This event is triggered when the initial HTML 
+document has been completely loaded and parsed, without waiting for stylesheets, 
+images, and subframes to finish loading. 
 */
 
 
