@@ -1,6 +1,216 @@
 "use strict"
 
 
+/*
+Object.freeze()  vs  const 
+*/
+const freezeVsConst = "june"
+freezeVsConst = "july"
+console.log(freezeVsConst) // TypeError: Assignment to constant variable.
+
+const person = {
+    name:"rohith"
+}
+Object.freeze(person)
+person.name="appala"
+console.log(person) // { name: 'rohith' }
+
+
+/*
+how to sort an given numbered array
+*/
+const unsortedArray = [10,4,29,34,63,3,87,72]
+const sortedArray = unsortedArray.sort((a,b)=>{
+    return a-b
+})
+console.log(sortedArray) // [3,  4, 10, 29,34, 63, 72, 87]
+
+
+
+/*
+how to sort an given string array
+*/
+const unsortedArrayStr = ["jan","march","feb","april"]
+const sortedArrayStr = unsortedArrayStr.sort()
+console.log(sortedArrayStr) 
+
+
+/*
+duplicate array
+*/
+const d=[14,23,6,6,14,56,87,14]
+const returnDuplicateEls = d.filter((el,i,arr)=>
+    (
+        arr.indexOf(el)!=i
+    )
+)
+console.log(returnDuplicateEls)
+
+
+/*
+remove duplicate values and log unique values in an array
+*/
+const u=[14,23,6,6,14,56,87,14]
+const returnuniqueEls = u.filter((el,i,arr)=>
+    (
+        arr.indexOf(el)===i
+    )
+)
+console.log(returnuniqueEls) // [ 14, 23, 6, 56, 87 ]
+
+
+/*
+remove duplicate values and log unique values in an array in sorted order
+*/
+const us=[14,23,6,6,14,56,87,14]
+const returnuniqueElsInSortedOrder = us.filter((el,i,arr)=>
+    (
+        arr.indexOf(el)===i
+    )
+).sort((a,b)=>(a-b))
+console.log(returnuniqueElsInSortedOrder) //  [ 6, 14, 23, 56, 87 ]
+
+
+/*
+remove duplicate values and log unique values in an array in sorted descending order
+*/
+const usd = [1,2,1,3,4,2,3,56,7,8,9]
+const usdSorted = usd.filter((el,i,arr)=>(
+    arr.indexOf(el)===i
+)).sort((a,b)=>b-a)
+
+console.log(usdSorted)
+
+
+
+/*
+find maximum value in an array
+*/
+const arrayValues = [1,2,3,4,56,7,98,9]
+const findMaXValueFunc = (arrayValues)=>{
+    return (
+        arrayValues.reduce((previous,currentValue)=>(
+               previous>currentValue?previous:currentValue
+            )
+        )
+    )
+}
+const maximumValue = findMaXValueFunc(arrayValues)
+console.log(maximumValue) // 98
+
+
+// average of numbered array
+const arrayValuesAvg = [1,2,3,4,5]
+const totalArrayValuesAvg = arrayValuesAvg.reduce((prev,current)=>(
+        prev+current
+    ))
+const lengthOfArrayValuesAvg = arrayValuesAvg.length
+console.log(totalArrayValuesAvg/lengthOfArrayValuesAvg)// 3
+
+
+
+
+// how can you uppercase 1st character in a string array
+const strs = ["jan","feb","march","april","may","june"]
+const uppperCaseArr = strs.map((el)=>{
+    console.log(el.substring(1))
+    return(
+        el.charAt(0).toUpperCase()+el.substring(1)
+    )
+})
+console.log(uppperCaseArr) // [ 'Jan', 'Feb', 'March', 'April', 'May', 'June' ]
+
+/* Output
+a
+eb
+arch
+pril
+ay
+une
+[ 'Jan', 'Feb', 'March', 'April', 'May', 'June' ]
+*/
+
+
+// how to find minimum value in numbered array
+const numMinArr = [2,3,1,0,4] 
+const minimumValue = numMinArr.reduce((p,c)=>(
+       p<c?p:c
+    ))
+console.log(minimumValue) // 0
+
+
+
+// how to make a sentence of a given array
+const strArray = ["hi","im","rohit"]
+const sentence = strArray.join(" ")
+console.log(sentence) // hi im rohit
+const sentenceWithHyphen = strArray.join("-")
+console.log(sentenceWithHyphen) // hi-im-rohit
+
+
+const ids = [1,2,3,4]
+const tobematch = [1,2]
+const resultMatch = ids.some((ele)=>tobematch.includes(ele))
+console.log(resultMatch)// true
+
+
+const idsNot = [3,4]
+const tobematchNot  = [1,2]
+const resultMatchNot = idsNot.some((ele)=>tobematchNot.includes(ele))
+console.log(resultMatchNot) // false
+
+
+
+/*
+find duplicate count
+const d=[23,6,6,14,56,87,14]
+*/
+
+
+// The Type of a js class is a function
+
+/*
+Inheritance in JS Classes
+The Inheritance is a mechanism by which a class inherits methods and properties from another class.
+
+2.1 Extends
+The extends keyword is used to inherit the methods and properties of the superclass.
+
+2.2 Super
+Calling super() makes sure that SuperClass constructor() gets called and initializes the instance.
+
+Syntax :
+
+class SuperClass {
+}
+class SubClass extends SuperClass{
+  constructor(property1, property2){
+    super(property1);
+    this.property2 = property2;
+  }
+  method1() {  }
+}
+let myObject = new SubClass(property1, property2);
+
+Here, SubClass inherits methods and properties from a SuperClass.
+
+2.3 Method Overriding
+Here the constructor method is overridden. If we write the SuperClass methods in SubClass, it is called method overriding.
+
+Syntax :
+class SuperClass {
+}
+class SubClass extends SuperClass{
+  constructor(property1, property2){
+    super(property1);
+    this.property2 = property2;
+  }
+}
+let myObject = new SubClass(property1, property2);
+
+
+*/
+
 // spread operators: unpack an iterable array as comma seperated values
 const add = (a,b)=>( // a,b are parameters
     console.log(a+b) // 4
@@ -150,6 +360,15 @@ Syntax : string.slice(start, end)
 */
 const text = "I'm a MERN stack developer"
 console.log(text.slice(6,10)) // MERN
+
+
+/*
+The indexOf() method of Array instances returns the first index at which a given 
+element can be found in the array, or -1 if it is not present.
+*/
+const fruitsArray = ["Banana", "Orange", "Apple", "Mango"];
+let index = fruitsArray.indexOf("Apple");
+
 
 
 /*
