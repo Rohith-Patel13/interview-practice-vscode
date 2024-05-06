@@ -284,6 +284,90 @@ const cloneObject = {...objectToBeClone}
 console.log(cloneObject) // { id: 10, name: 'Ram', dept: 'Computer Science' }
 
 
+// how to add an element at beginning of an array ?
+const idsNums = [5,4,34,45,34,45]
+const addFirstEl = idsNums.unshift(2)
+console.log(idsNums) // [2,5,4,34,45,34,45]
+console.log(addFirstEl) // 3
+
+
+// how to remove an element at end of an array ?
+const idsNumsend = [5,4,34,45,34,45]
+const addFirstElend = idsNumsend.pop()
+console.log(idsNumsend) // [ 5, 4, 34, 45, 34 ]
+console.log(addFirstElend) // 45
+
+
+// how to split a sentence in to array
+const s = "welcome to  msd world"
+const splitS = s.split(" ")
+console.log(splitS)// [ 'welcome', 'to', '', 'msd', 'world' ]
+
+
+// how can you replace an existing element and add new element in an object?
+const Ob = {
+    street:"1 banglore street",
+    city:"banglore",
+    state:"KA",
+    zip:433434
+}
+Ob.zip = 55555
+Ob.country="india"
+console.log(Ob) // { street: '1 banglore street', city: 'banglore', state: 'KA', zip: 55555,country: 'india'}
+
+
+// how to remove element at begining of an array?
+const eles = [45,4,32,23,56,6767]
+const newELES = eles.splice(0,1)
+console.log(eles)// [ 4, 32, 23, 56, 6767 ]
+console.log(newELES) // [ 45 ]
+
+// syntax:- array.slice(start,end)
+const eless = [45,4,32,23,56,6767]
+const newELESs = eless.slice(1)
+console.log(eless) // [ 45, 4, 32, 23, 56, 6767 ]
+console.log(newELESs) //[ 4, 32, 23, 56, 6767 ]
+
+
+// write a method which takes x number of parameters?
+const xNum = (...xNumOfParameters)=>{
+    console.log(xNumOfParameters)
+}
+xNum(1,2,3,4,6,7,8,9,4,2)
+
+
+// convert a given number into exact decimal points to right side?
+const num = 5465.3456789
+const n = num.toFixed(3)
+console.log(n)// 5465.346
+
+
+// how can you return a character from a string at a specific index?
+const charStr = "welcome to ARC Tutorials";
+const letterSpecific =charStr.charAt(0)
+console.log(letterSpecific) // w
+
+
+// write an add method using javascript currying concept?
+const addingValue =x=>y=>console.log(x+y)
+const addingValue20 = addingValue(10)
+addingValue20(20)
+
+
+// how to replace a given string in a given array?
+const arrR = ["ban","banglore","banned","banaras"];
+const joinArrR = arrR.join(" ")
+console.log(joinArrR)
+const replaceWithBen = joinArrR.replace("ban","ben") // ban banglore banned banaras
+const arrayR = replaceWithBen.split(" ")
+console.log(arrayR) // [ 'ben', 'banglore', 'banned', 'banaras' ]
+
+
+// how to create an array out of a sentence?
+const Sentences = "welcome to india"
+const arrSen = Sentences.split(" ")
+console.log(arrSen) // [ 'welcome', 'to', 'india' ]
+
 
 /*
 find duplicate count
