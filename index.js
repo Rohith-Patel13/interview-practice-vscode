@@ -161,6 +161,130 @@ console.log(resultMatchNot) // false
 
 
 
+const stdArray = [1,2,3,4,5,6,8]
+const stdStr = "King"
+console.log(Array.isArray(stdArray)) // true
+console.log(Array.isArray(stdStr)) // false
+
+
+const str = "welcome to js coding"
+const strArr = str.split("")
+console.log(strArr)
+const reversedArr = strArr.reverse()
+console.log(reversedArr)
+console.log(reversedArr.join(""))
+/*
+Output:
+
+[
+  'w', 'e', 'l', 'c', 'o',
+  'm', 'e', ' ', 't', 'o',
+  ' ', 'j', 's', ' ', 'c',
+  'o', 'd', 'i', 'n', 'g'
+]
+[
+  'g', 'n', 'i', 'd', 'o',
+  'c', ' ', 's', 'j', ' ',
+  'o', 't', ' ', 'e', 'm',
+  'o', 'c', 'l', 'e', 'w'
+]
+gnidoc sj ot emoclew
+*/
+
+
+
+// IIFEs :- immediately invoked function expressions
+(
+    function getData(){
+        console.log("Hi I'm inside IIFEs") // Hi I'm inside IIFEs
+    }
+)();
+
+
+// how to empty an array
+
+// 1st method:
+const filledArray= [1,23,4,5,6,7]
+const EmptyArray=filledArray.splice(0,filledArray.length) // splice of method is a mutable method
+console.log(filledArray) // []
+console.log(EmptyArray) // [ 1, 23, 4, 5, 6, 7 ]
+
+
+// 2nd method:
+const filledArrayels= [1,23,4,5,6,7]
+while(filledArrayels.length>0){
+    filledArrayels.pop() // pop() removes the last element of an array.
+}
+console.log(filledArrayels) // []
+
+
+// palindrome:- when you change the order of a string then it will remain same in forward and backward, example is "radar","madam"
+// check given string is palindrome or not
+const stringPl = "Radar"
+const lowerStrCase = stringPl.toLowerCase()
+console.log(lowerStrCase)
+const strSpl = lowerStrCase.split("")
+console.log(strSpl) // [ 'r', 'a', 'd', 'a', 'r' ]
+const reverseStrSplWithJoin= strSpl.reverse().join("") // "radar"
+console.log(reverseStrSplWithJoin===lowerStrCase)// true
+
+
+
+// how can you combine 2 arrays in to 3rd array using spread operator
+const Firstarr = [1,2,3,4,5,6]
+const secondArr = [0,9,8,7]
+const ThirdArr = [...Firstarr,...secondArr]
+console.log(ThirdArr)
+
+
+// how can you combine 2 arrays in to 3rd array using spread operator
+// sort() method is mutable method which also changes original array
+const originalArray = [0,9,8,7]
+const SortingArray = [...originalArray]
+console.log(originalArray,SortingArray.sort((a,b)=>a-b).reverse())// [ 0, 9, 8, 7 ] [ 9, 8, 7, 0 ]
+
+
+// how can we replace an element at a specific index in an array?
+const arraySpecific = [ 9, 8, 7, 0,5,4,3,2,1 ]
+const replaceSpecificEl = arraySpecific.splice(3,1,6)
+console.log(arraySpecific) // [ 9, 8, 7, 6, 5, 4, 3, 2, 1]
+console.log(replaceSpecificEl) // [ 0 ]
+
+
+// how can we insert an element at a specific index in an array?
+const arrSpecific = [ 12,45,54,67,2,56,88]
+const insertSpecificEl = arrSpecific.splice(2,0,3)
+console.log(arrSpecific) // [12, 45,  3, 54,67,  2, 56, 88]
+console.log(insertSpecificEl) // []
+
+
+// how can we delete an element at a specific index in an array?
+const arrSpecificDel = [ 10,454,45,767,232,54]
+const deleteSpecificEl = arrSpecificDel.splice(1,1)
+console.log(arrSpecificDel) // [ 10, 45, 767, 232, 54 ]
+console.log(deleteSpecificEl) // [ 454 ]
+
+
+// how can we delete an element in an array?
+const arrSpecificDelEl = [ 1,2,3,4,5]
+const toBeDeleteElement = 3
+const deleteSpecificElInArr=arrSpecificDelEl.filter((each)=>toBeDeleteElement!==each)
+console.log(arrSpecificDelEl) // [ 1, 2, 3, 4, 5 ]
+console.log(deleteSpecificElInArr) // [ 1, 2, 4, 5 ]
+
+
+
+// how can we clone an object?
+const objectToBeClone = {
+    id:10,
+    name:"Ram",
+    dept:"Computer Science"
+}
+const cloneObject = {...objectToBeClone}
+console.log(cloneObject) // { id: 10, name: 'Ram', dept: 'Computer Science' }
+
+
+
 /*
 find duplicate count
 const d=[23,6,6,14,56,87,14]
