@@ -1,5 +1,97 @@
 "use strict"
 
+// give a number "n",find the nth element of fibonacci sequence (0,1,1,2,3,5,8,..)
+const fibonacciWithRecursion= (nthIndex)=>{
+    if(nthIndex<2){
+        return nthIndex
+    }
+    return fibonacciWithRecursion(nthIndex-1)+fibonacciWithRecursion(nthIndex-2)
+}
+console.log(fibonacciWithRecursion(3)) // 2
+console.log(fibonacciWithRecursion(1)) // 1
+console.log(fibonacciWithRecursion(0)) // 0
+console.log(fibonacciWithRecursion(6)) // 8
+
+
+
+
+// give a number "n",find the nth element of fibonacci sequence (0,1,1,2,3,5,8,..)
+const fibonacciWithoutRecursion= (nthIndex)=>{
+    if(nthIndex===0){
+        return nthIndex
+    }
+    let fEls = [0,1]
+    for(let i=2;i<=nthIndex;i++){
+        fEls[i] = fEls[i-1]+fEls[i-2]
+    }
+    return fEls[fEls.length-1]
+}
+console.log(fibonacciWithoutRecursion(3)) // 2
+console.log(fibonacciWithoutRecursion(1)) // 1
+console.log(fibonacciWithoutRecursion(0)) // 0
+console.log(fibonacciWithoutRecursion(6)) // 8
+
+
+
+
+/*
+-recursion is when a function call itself
+-every recursion needs to have a condition to terminate recursion
+ex:-
+const func = ()=>(
+    func()
+)
+func()
+*/
+const factorialRecursion = (n)=>{
+    if(n===1){
+        return n
+    }
+    return n*factorialRecursion(n-1) 
+}
+console.log(factorialRecursion(5))// 120
+console.log(factorialRecursion(2))// 2
+
+
+
+
+// n should be equal to 2 power x
+const isPowerOfTwoBitwise=(n)=>{
+    if(n<1){
+        return false
+    }
+    return (n & (n-1))===0
+}
+console.log(isPowerOfTwoBitwise(8)) // true
+console.log(isPowerOfTwoBitwise(5)) // false
+
+
+
+
+// n should be equal to 2 power x
+// Big O = O(logn)
+const PowerOfTwo=(n)=>{
+    if(n<1){
+        return false
+    }
+    // console.log(n/2)
+    let quotient=n
+    while(quotient!==1){
+        if(quotient%2!==0){
+            return false
+        }
+        quotient=quotient/2
+        // console.log(quotient,"remainder")
+    }
+    return true
+}
+console.log(PowerOfTwo(8)) // true
+console.log(PowerOfTwo(5)) // false
+console.log(PowerOfTwo(7)) // false
+
+
+
+
 // prime is a natural number which is less than 2 or greater than 1,and factors of prime number are 1 and itself
 const isPrime = (n)=>{
     if(n<2){
