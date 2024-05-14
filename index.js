@@ -1,5 +1,106 @@
 "use strict"
 
+// prime is a natural number which is less than 2 or greater than 1,and factors of prime number are 1 and itself
+const isPrime = (n)=>{
+    if(n<2){
+        return false
+    }
+    for(let i=2;i<n;i++){
+        //1 and n are divisible by itself
+        if(n%i===0){
+            return false
+        }
+    }
+    return true
+}
+console.log(isPrime(2)) // true
+console.log(isPrime(3)) // true
+console.log(isPrime(4)) // false
+console.log(isPrime(0)) // false
+console.log(isPrime(1)) // false
+
+
+
+const factorialOfAnInteger = (n)=>{
+    let factorialNumber=1;
+    for(let i = 1;i<=n;i++){
+        // console.log(i)
+        factorialNumber= factorialNumber*i
+    }
+    return factorialNumber
+}
+console.log(factorialOfAnInteger(2)) // 2
+console.log(factorialOfAnInteger(3)) // 6
+console.log(factorialOfAnInteger(4)) // 24
+console.log(factorialOfAnInteger(0)) // 1
+console.log(factorialOfAnInteger(1)) // 1
+
+
+const fibonacciSequence = (n)=>{
+    let f = [0,1]
+    for(let i=2;i<n;i++){
+        f[i]=f[i-1]+f[i-2]
+    }
+    return f
+}
+console.log(fibonacciSequence(2)) // [ 0, 1 ]
+console.log(fibonacciSequence(3)) // [ 0, 1, 1 ]
+console.log(fibonacciSequence(4)) // [ 0, 1, 1, 2 ]
+
+
+
+const assignArr = [1,2,3,4,5]
+assignArr[2]=6
+console.log(assignArr) // [ 1, 2, 6, 4, 5 ]
+
+
+const duplicateArray = [2,5,7,9,0,2,4,3,7,10,1,1,6]
+let newArray = []
+const array = duplicateArray.forEach((eachEl)=>{
+    // console.log(eachEl)
+    if(newArray.includes(eachEl)){
+        return newArray
+    }
+    newArray.push(eachEl)
+})
+console.log(newArray)// [2, 5,  7, 9, 0,4, 3, 10, 1, 6]
+
+
+const secondDuplicateArr = [1,2,1,0,3,4,3]
+const withoutDuplicateValues = (arrayWithDuplicateValues)=>{
+    let newArr = []
+    arrayWithDuplicateValues.forEach((eachEl)=>{
+        for(let i of newArr){
+            if(i===eachEl){
+                return newArr
+            }
+        }
+        newArr.push(eachEl)
+    })
+    return(
+        newArr
+    )
+}
+console.log(withoutDuplicateValues(secondDuplicateArr))
+
+
+
+// without using internal js
+const duplicateArr = [2,5,7,9,0,2,4,3,7,10,1,1,6]
+let newArr = []
+const arr = duplicateArr.forEach((eachEl)=>{
+    // console.log(eachEl)
+    for(let i of newArr){
+        if(i===eachEl){
+            return newArr
+        }
+    }
+    newArr.push(eachEl)
+})
+console.log(newArr)// [2, 5,  7, 9, 0,4, 3, 10, 1, 6]
+
+
+
 
 /*
 Object.freeze()  vs  const 
@@ -1352,3 +1453,19 @@ const Strnum = +"20"
 console.log(typeof Strnum) // number
 
 
+
+
+const person = {
+    name:"ram",
+    age:30
+}
+console.log(Object.keys(person)) // [ 'name', 'age' ]
+console.log(Object.entries(person)) // [ [ 'name', 'ram' ], [ 'age', 30 ] ]
+const getObjectEntries = (obj)=>{
+    const key = Object.keys(obj);
+    console.log(key) // [ 'name', 'age' ]
+    const finalEntries = key.map((eachKey)=>[eachKey,obj[eachKey]])
+    return finalEntries
+}
+const returnedObjectEntries=getObjectEntries(person)
+console.log(returnedObjectEntries) // [ [ 'name', 'ram' ], [ 'age', 30 ] ]
