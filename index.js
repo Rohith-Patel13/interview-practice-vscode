@@ -1,5 +1,42 @@
 "use strict"
 
+/*
+Climbing StairCase:where as n=number of steps
+-count the number of distinct way to climb the top
+n=1,climbingstaircase(1)=1 | (1)
+n=2,climbingstaircase(2)=2 | (1,1) and (2)
+n=3,climbingstaircase(3)=3 | (1,1,1) (1,2) and (2,1)
+n=4,climbingstaircase(4)=5 | (1,1,1,1) (1,1,2) (1,2,1) (2,1,1) and (2,2)
+*/
+
+// cartesian prooduct example: 
+const climbingstaircase=(n)=>{
+    return n
+}
+console.log(climbingstaircase(5))
+
+
+
+/* 
+Cartesian Product:
+if A=[1,2] and B=[3,4] then,AXB=[[1,3],[1,4],[2,3],[2,4]]
+*/
+// cartesian prooduct example: 
+// time complexity:-  Big-O = O(mn)
+const cartesianProduct=(A,B)=>{
+    let result = []
+    for(let i=0;i<A.length;i++){
+        for(let j=0;j<B.length;j++){
+            result.push([A[i],B[j]])
+        }
+    }
+    return result
+}
+console.log(cartesianProduct([1,2],[3,4])) // [ [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ] ]
+console.log(cartesianProduct([1,2],[3,4,5])) // [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ], [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ]
+
+
+
 
 // bubble sort example: compare adjacent elements and swap them:
 // Big-O = O(n2)
