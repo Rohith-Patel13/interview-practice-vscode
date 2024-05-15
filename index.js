@@ -1,5 +1,93 @@
 "use strict"
 
+
+// bubble sort example: compare adjacent elements and swap them:
+// Big-O = O(n2)
+const sortUsingBubbleSort=(unsortedArray)=>{
+    let swapped
+    do{
+        for(let i=0;i<unsortedArray.length-1;i++){
+            // console.log(i)
+            swapped=false
+            if(unsortedArray[i]>unsortedArray[i+1]){
+                let temp=unsortedArray[i]
+                unsortedArray[i]=unsortedArray[i+1]
+                unsortedArray[i+1]=temp
+                swapped=true // Set flag if swap occurs
+            }
+        }
+    }while(swapped)
+    return unsortedArray
+}
+console.log(sortUsingBubbleSort([-6,20,8,-2,4]))
+
+
+
+
+const test = [1,0,3,4]
+test[1]=2
+console.log(test) // [ 1, 2, 3, 4 ]
+
+
+// binary search only works on a sorted array
+//Binary search is more efficient than the linear search in the case of large data sets.
+// take middle element and if target element is greater than middle element get rid of first half and vice versa
+// time complexity is O(logn)
+const indexOfTargetElementBinarySearch = (arrTar,tar)=>{
+    let leftIndex = 0
+    let rightIndex = arrTar.length-1
+    while(leftIndex<=rightIndex){
+        let middleIndex = Math.floor((leftIndex+rightIndex)/2)
+        if(arrTar[middleIndex]===tar){
+            return middleIndex
+        }
+        if(tar<arrTar[middleIndex]){
+            rightIndex= middleIndex-1
+        }
+        if(tar>arrTar[middleIndex]){
+            leftIndex= middleIndex+1
+        }
+    }
+    return -1
+}
+console.log(indexOfTargetElementBinarySearch([-5,2,4,6,10],10))// 4
+console.log(indexOfTargetElementBinarySearch([-5,2,4,6,10],1))// -1
+console.log(indexOfTargetElementBinarySearch([-5,2,4,6,10],2))// 1
+console.log(indexOfTargetElementBinarySearch([-5,2,4,6,10],4))// 2
+
+
+
+
+// Linear search example
+// Big-O is O(n)
+const arrTar = [-5,2,10,4,6]
+const tar = 10
+const indexOfTargetEl = (arrTar,tar)=>{
+    for(let i=0;i<arrTar.length;i++){
+        // console.log(i)
+        if(arrTar[i]===tar){
+            return i
+        }
+    }
+    return -1
+}
+console.log(indexOfTargetEl(arrTar,tar))// 2
+
+
+
+
+
+const arrTarget = [-5,2,10,4,6]
+const t = 10
+const indexOfTargetElement = (arrTarget,t)=>{
+    const indexOfTargetEl = arrTarget.findIndex((each)=>each===t)
+    return indexOfTargetEl
+}
+console.log(indexOfTargetElement(arrTarget,t))
+
+
+
+
 // give a number "n",find the nth element of fibonacci sequence (0,1,1,2,3,5,8,..)
 const fibonacciWithRecursion= (nthIndex)=>{
     if(nthIndex<2){
