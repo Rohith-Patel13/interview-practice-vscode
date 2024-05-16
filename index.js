@@ -1,6 +1,38 @@
 "use strict"
 
 /*
+useEffect will run after render of the component
+
+useMemo will run during render of the component
+*/
+
+// pass by value:
+let xa = 1
+let ya = xa
+ya=ya+1
+console.log(xa) // 1
+console.log(ya) // 2
+
+
+// pass by reference:
+let ax = [1,2]
+let ay = ax
+ay[2]=3
+console.log(ax) // [ 1, 2, 3 ]
+console.log(ay) // [ 1, 2, 3 ]
+
+
+
+/*
+Dynamic programming is all about breaking down a problem into smaller 
+subproblems and solving each subproblem only once, storing the 
+solutions for future reference. This approach can significantly 
+improve the efficiency of our algorithms by avoiding redundant 
+calculations.
+*/
+
+
+/*
 Climbing StairCase:where as n=number of steps
 -count the number of distinct way to climb the top
 n=1,climbingstaircase(1)=1 | (1)
@@ -8,12 +40,19 @@ n=2,climbingstaircase(2)=2 | (1,1) and (2)
 n=3,climbingstaircase(3)=3 | (1,1,1) (1,2) and (2,1)
 n=4,climbingstaircase(4)=5 | (1,1,1,1) (1,1,2) (1,2,1) (2,1,1) and (2,2)
 */
-
-// cartesian prooduct example: 
+// climbingstaircase example: 
 const climbingstaircase=(n)=>{
-    return n
+    let noOfWays = [1,2]
+    for(let i = 2;i<=n;i++){
+        noOfWays[i]=noOfWays[i-1]+noOfWays[i-2]
+    }
+    return noOfWays[n-1]
 }
-console.log(climbingstaircase(5))
+console.log(climbingstaircase(1)) // 1
+console.log(climbingstaircase(2)) // 2
+console.log(climbingstaircase(3)) // 3
+console.log(climbingstaircase(4)) // 5
+console.log(climbingstaircase(5)) // 8
 
 
 
