@@ -1,10 +1,52 @@
 "use strict"
 
 /*
+To make invisible the border of search input:-
+example:-
+
+index.js:-
+<input type="search" placeholder="search" className="search-box" />
+
+index.css:-
+.search-box{
+    outline-width:0;
+    border:none;
+}
+*/
+
+/*
+Material UI makes it very easy to write CSS-in-JS code enabling us 
+to make more CSS changes to our taste. To better change the styling 
+of what we already have, we can use the makeStyles function from 
+Material UI, which allows us to create CSS classes with JavaScript.
+*/
+
+/*
+Flex Grow:-
+The flex-grow property specifies how flex items Scale Up their size based on the available space.
+Flex Grow property has the following values:
+0(default)
++ve values
+
+Flex Shrink:-
+The flex-shrink property specifies how flex items Scale Down their size based on the available space.
+Flex Shrink property has the following values:
+1(default)
+0
++ve values
+*/
+
+
+/*
 useEffect will run after render of the component
 
 useMemo will run during render of the component
+
+Hooks are reusable functions.
+When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+Custom Hooks start with "use". Example: useFetch.
 */
+
 
 // pass by value:
 let xa = 1
