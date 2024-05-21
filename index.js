@@ -1,6 +1,16 @@
 "use strict"
 
 /*
+You might have seen a “login with Google” or “login with Facebook” 
+button on the login/signup page of a website that makes easier to 
+get using the service or website by simply logging into one of the 
+services and grant the client application permission to access your 
+data without giving Password. This is done with the OAuth.
+*/
+
+
+
+/*
 To make invisible the border of search input:-
 example:-
 
