@@ -1,5 +1,142 @@
 "use strict"
 
+
+const largestNumInArray = (arr)=>{
+    let largestNum=null
+    for(let i of arr){
+        largestNum=largestNum<i?i:largestNum
+    }
+    return largestNum
+}
+console.log(largestNumInArray([2,4,6,9,3])) // 9
+
+
+
+// number of vowels in a string
+const countOfVowels = (str)=>{
+    const vowels=["a","e","i","o","u"]
+    let count = 0
+    for(let i of str.toLowerCase()){
+        vowels.includes(i)?count++:count
+    }
+    return count
+}
+console.log(countOfVowels("Hello, world!")) // 3
+
+
+
+
+// whether two strings are anagrams or not.
+// anagram is a word formed by rearranging the letters of another word.
+const AnagramOrNot = (str1,str2)=>{
+    return str1.split("").sort().join("")===str2.split("").sort().join("")
+}
+console.log(AnagramOrNot("listen","silent"))
+
+
+// using set object method in js remove duplicate elements in an array
+const duplicateElsRemoval = (arr)=>{
+    return [...new Set(arr)]
+} 
+console.log(duplicateElsRemoval([1,2,3,4,4,5,6,6])) // [ 1, 2, 3, 4, 5, 6 ]
+
+
+// duplicate values removeing
+const RemovingDuplicateElsWithInternalJs = (arr)=>{
+    let arrayWithoutDuplicateElements = []
+    for(let i of arr){
+        arrayWithoutDuplicateElements.includes(i)?arrayWithoutDuplicateElements:arrayWithoutDuplicateElements.push(i)
+    }
+    return arrayWithoutDuplicateElements
+}
+console.log(RemovingDuplicateElsWithInternalJs([1,2,3,4,4,5,6,6]))// [ 1, 2, 3, 4, 5, 6 ]
+
+
+
+
+
+
+// palindrom or not
+const isPalindromeOrNotWithoutInternalJs = (str)=>{
+    let reversedStr = ""
+    for(let i=str.length-1;i>-1;i--){
+        reversedStr+=str[i]
+    }
+    return reversedStr===str
+}
+console.log(isPalindromeOrNotWithoutInternalJs("radar")) // true
+console.log(isPalindromeOrNotWithoutInternalJs("racer")) // false
+
+
+
+// palindrom or not
+const isPalindromeOrNot = (str)=>{
+    return str.split("").reverse().join("")===str
+}
+console.log(isPalindromeOrNot("radar")) // true
+console.log(isPalindromeOrNot("racer")) // false
+
+
+// write a function that returns the longest word in the sentence?
+const withoutInternalJsLongestWord = (str)=>{
+    let longest=""
+    for(let i of str.split(" ")){
+        longest = longest.length>i.length?longest:i
+    }
+    return longest
+}
+console.log(withoutInternalJsLongestWord("I love coding in javascript"))
+console.log(withoutInternalJsLongestWord("I love coding in dsa"))
+
+
+
+// write a function that returns the longest word in the sentence?
+const findLogestword = (strs) => {
+    const arrStr = strs.split(" ")
+    const long= arrStr.reduce((a,c)=>{
+        // console.log(a,c)
+        if(a.length>c.length){
+            return a
+        }
+        return c
+    })
+    return long
+}
+console.log(findLogestword("I love coding in javascript")); // javascript
+console.log(findLogestword("I love coding in dsa")); // coding
+
+
+
+
+
+// write a function that returns the reverse of a string without using internal js?
+const withoutInternalJsReverseString = (strs)=>{
+    let reversedStr = "";
+    for(let i = strs.length-1; i>-1; i--){
+        // console.log(i)
+        reversedStr+=strs[i]
+    }
+    return reversedStr
+}
+console.log(withoutInternalJsReverseString("Interview, Happy"))// yppaH ,weivretnI
+
+
+
+// write a function that returns the reverse of a string with internal js?
+const ReturnsReverseOfAString=(str)=>{
+    const strToArr = str.split("")
+    const reverseStrArr = strToArr.reverse()
+    const reveseStr = reverseStrArr.join("")
+    return reveseStr
+}
+console.log(ReturnsReverseOfAString("Love is toxic")) // cixot si evoL 
+console.log(ReturnsReverseOfAString("interview, Happy")) // yppaH ,weivretni
+
+
+
+
+
+
 /*
 You might have seen a “login with Google” or “login with Facebook” 
 button on the login/signup page of a website that makes easier to 
@@ -7,7 +144,6 @@ get using the service or website by simply logging into one of the
 services and grant the client application permission to access your 
 data without giving Password. This is done with the OAuth.
 */
-
 
 
 /*
