@@ -1,5 +1,149 @@
 "use strict"
 
+/*
+for...in loop is used to loop through the properties of an object
+*/
+const personOb = {
+    name:"rohith",age:22,gender:"male"
+}
+for(let key in personOb){
+    console.log(personOb[key])
+}
+/*
+output:
+rohith
+22
+male
+*/
+
+
+/*
+Reconciliation is React's way of diffing the virtual DOM tree with the updated 
+virtual DOM to determine the most efficient way to update the real DOM. 
+This process allows React to apply only the necessary changes to the DOM, 
+avoiding the costly operation of updating the entire DOM tree.
+*/
+
+
+
+
+// hoisting
+console.log(aging) // undefined
+var aging = 10
+console.log(aging) // 10
+
+
+console.log(typeof [])// object
+console.log(typeof {})// object
+const checkArray = (el)=>{
+    return Array.isArray(el)
+}
+console.log(checkArray([])) // true
+console.log(checkArray({})) // false
+
+
+// how to swap two variables without using the third variable
+let as = 1;
+let bs = 2;
+[as, bs] = [bs, as];
+console.log(`as: ${as}  bs: ${bs}`); // as: 2  bs: 1
+
+
+
+// sort an array by even and odd numbers
+const sortByEvenAndOdd = (arr)=>{
+    const sortedArray = arr.sort((a,b)=>{
+        if(a%2!==b%2){
+            return a%2===0?-1:1
+        }
+        return a-b
+    })
+    return sortedArray
+}
+console.log(sortByEvenAndOdd([9,8,6,5,2,4,1,10])) // [2,4,6,8,10,1,5,9]
+
+
+
+
+// find the missing number from the given array of input based on the count
+const misingNumber = (arr,count)=>{
+    let m=[]
+    for(let i = 1;i<=count;i++){
+        // console.log(i)
+        if(arr.includes(i)) continue
+        m.push(i)
+    }
+    return m
+}
+console.log(misingNumber([1,2,3,5],10)) // [ 4, 6, 7, 8, 9, 10 ]
+
+
+
+/*
+Callback Hell, also known as "Pyramid of Doom", refers to a situation where 
+multiple nested callbacks make the code more difficult to read and understand. 
+This often occurs when dealing with asynchronous operations, such as handling 
+events, making HTTP requests, or reading files.
+*/
+
+
+
+// find the missing number from the given array of input
+const misingNum = (arr)=>{
+    return arr
+}
+console.log(misingNum([1,2,3,5]))
+
+
+
+// remove all whitespace characters from string
+const removeWhiteSpaceChar = (str)=>{
+    const arr = str.split("")
+    let removedStr=""
+    for(let i of arr){
+        if(i===" ") continue
+        removedStr+=i
+    }
+    return removedStr
+}
+console.log(removeWhiteSpaceChar(" interview,   Happy ")) 
+
+
+
+const factorialOfANum = (n)=>{
+    let fact=1
+    for(let i=1;i<=n;i++){
+        fact=fact*i
+    }
+    return fact
+}
+console.log(factorialOfANum(5)) // 120
+
+
+
+const factorialOfANumber = (number)=>{
+    if(number===1){
+        return 1
+    }
+    return number*factorialOfANumber(number-1)
+}
+console.log(factorialOfANumber(5))
+
+
+// prime or not
+const isPrimeOrNot = (number)=>{
+    if(number<2) return false
+    for(let i=2;i<number;i++){
+        if(number%i===0) return false
+    }
+    return true
+    
+}
+console.log(isPrimeOrNot(1)) // false
+console.log(isPrimeOrNot(10)) // false
+console.log(isPrimeOrNot(7)) // true
+console.log(isPrimeOrNot(2)) // true
+
 
 const largestNumInArray = (arr)=>{
     let largestNum=null
@@ -444,25 +588,6 @@ console.log(PowerOfTwo(7)) // false
 
 
 
-// prime is a natural number which is less than 2 or greater than 1,and factors of prime number are 1 and itself
-const isPrime = (n)=>{
-    if(n<2){
-        return false
-    }
-    for(let i=2;i<n;i++){
-        //1 and n are divisible by itself
-        if(n%i===0){
-            return false
-        }
-    }
-    return true
-}
-console.log(isPrime(2)) // true
-console.log(isPrime(3)) // true
-console.log(isPrime(4)) // false
-console.log(isPrime(0)) // false
-console.log(isPrime(1)) // false
-
 
 
 const factorialOfAnInteger = (n)=>{
@@ -763,6 +888,13 @@ while(filledArrayels.length>0){
 console.log(filledArrayels) // []
 
 
+// 3rd method:
+// empty an array
+const filledArrayEls = [12,4,5,6]
+filledArrayEls.length = 0
+console.log(filledArrayEls) // []
+
+
 // palindrome:- when you change the order of a string then it will remain same in forward and backward, example is "radar","madam"
 // check given string is palindrome or not
 const stringPl = "Radar"
@@ -977,6 +1109,7 @@ const log = (...rest)=>( // parameters
     console.log(rest) // [2,2,3]
 )
 log(2,2,3) // here are arguments
+
 
 
 const logging = (a,b,...rest)=>( // parameters
@@ -1198,7 +1331,8 @@ fruits.forEach((fruit) => console.log(fruit));
 
 /*
 Immutable method:- filter()
-The filter() method creates a new array filled with all elements that pass the test (provided as a function).
+The filter() method creates a new array filled with all elements that pass 
+the test (provided as a function).
 
 A new array with the elements that pass the test will be returned.
 If no elements pass the test, an empty array will be returned.
@@ -1280,8 +1414,11 @@ console.log(typeof NaN) // number
 console.log(typeof -"9") // number
 console.log(typeof +"9") // number
 
+
 // if "+" is used concatenate will done, if remaining like  -,*,/ the math will be used
-console.log(typeof (7+"5")) // string
+console.log(7+"5")// 75
+console.log(7*"5")// 35
+console.log(7-"5")// 2
 
 
 // in javascript the true boolean is 1 and false boolean is 0
@@ -1303,7 +1440,7 @@ console.log(findIndexVal) // 5
 
 
 
-
+// to create private variables closures are used
 const outer = (name)=>{ // closure has access to outer function parameter
     const greet = "Hi" // closure has access to outer function scope
     return ()=>{
@@ -1337,12 +1474,15 @@ const func = function(){
 func()
 
 
+
 /* event loop :
 -event loop is responsible asynchronous programming in js
 -event loop is a program which runs continously until the page closes
 -tiny component in js runtime
 -in js an activity is done continously then it is known as event loop
 */
+
+
 
 // currying functions
 const addFunctionCurrying = x => y =>console.log(x+y)
@@ -1352,7 +1492,20 @@ const add50 = addFunctionCurrying(50)
 add50(100) // 150
 
  
+
 // higher order function: a fubction which accepts another function as an argument, ex:- map(),reduce()
+// In below example  "displayHof" is  higher order function and "addFunction","mulFunction" are callback functions
+const addFunction = (x,y)=>x+y
+const mulFunction =(m,n)=>m*n
+
+const displayHof=(a,b,operation)=>{
+    return operation(a,b)
+}
+console.log(displayHof(10,5,addFunction)) // 15
+console.log(displayHof(10,5,mulFunction)) // 50
+
+
+
 
 // event delegation: adding an event listener to a single(parent) element and perform actions on child elements if you want instead of attaching event listeners to all elements
 
@@ -1383,6 +1536,8 @@ without strict mode
 console.log(typeof null)// object
 console.log(typeof NaN)// number
 console.log(typeof undefined) // undefined
+console.log(typeof []) // object
+
 
 /* Ajax: -asynchronous javascript xml, we can send data to server and get data without refreshing page
 -initially or in olden days web servers used to send data in XML format
