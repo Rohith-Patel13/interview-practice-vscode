@@ -58,6 +58,40 @@ libraries and best practices.
 Browser(chrome or edge or firefox) <--->  Client-side(React or Angular)  <--->   Server-side(Node.js with Express.js framework) <---> Database(Mongodb or SQLITE)
 */
 
+/*
+why node.js or what are 7 main features of node.js?
+>single threaded
+>asynchronous
+>event-driven
+>v8 js engine
+>cross-platform
+>NPM
+>Real-Time Capabilities:-Node is good for
+handling bi-directional communication like 
+chat application,gaming application where
+user interact directly
+*/
+
+
+/*
+what is single threaded programming?
+->when we use other languages other than node
+the single threaded programming is a synchronous
+programming.
+->but by using node.js we can achieve asynchronous
+programming even with single threaded
+*/
+
+
+/*
+what is synchronous programming?
+->synchronous approach is a blocking approach
+because until task one is completed task 2
+has to be wait.
+->synchronous programming focuses on 
+order of execution in a sequential
+manner
+*/
 
 
 
