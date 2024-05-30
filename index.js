@@ -144,6 +144,32 @@ functionalities for node projects.You can install third-party modules by using "
 example:-npm install express
 */
 
+/*
+Top built-in modules commonly used in node.js projects?
+1)fs, 2)path, 3)os, 4)events, 5)http
+*/
+
+/*
+1)fs module:-
+->fs module in node.js provides a set of methods for interacting with the file system, like methods are fs.readFile(),fs.writeFile(),fs.mkdir()
+example:-
+fs.readFile("fs.txt","utf8",(err,data)=>{
+    if(err){
+        return;
+    }
+    console.log(data)
+})
+
+const contentToWrite="some content"
+fs.writeFile("fs.txt",contentToWrite,"utf8",(err)=>{
+    if(err){
+        return;
+    }
+    console.log("write operation completed")
+})
+*/
+
+
 
 const rd=(arr)=>{
     let wd=[]
