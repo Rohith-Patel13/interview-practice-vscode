@@ -1,6 +1,50 @@
 "use strict"
 
 
+
+
+/*
+Null in JavaScript means an empty value and is also a primitive type in JavaScript. 
+The variable which has been assigned as null contains no value. Undefined, 
+on the other hand, means the variable has been declared, but its value has not been assigned.
+*/
+
+let variableDeclaredAssigned=null;
+console.log(variableDeclaredAssigned) // null
+const vda=null
+console.log(vda) // null
+console.log(typeof null) // object
+
+
+
+
+let variableDeclaredButNotAssigned;
+console.log(variableDeclaredButNotAssigned) // undefined
+console.log(typeof undefined) // undefined
+/*
+In JavaScript, the const keyword is used to declare constants, which are variables that cannot be reassigned. 
+However, a const declaration must be initialized when it is declared. If you declare a const variable without initializing it, 
+you'll get a SyntaxError: Missing initializer in const declaration.
+
+const v;
+console.log(v) // SyntaxError: Missing initializer in const declaration
+*/
+
+
+
+
+console.log(null===undefined) // false
+console.log(null==undefined) // true
+
+
+
+const shortcutDuplicate=(ar)=>{
+    return [...new Set(ar)]
+}
+console.log(shortcutDuplicate([1,2,3,2])) // [ 1, 2, 3 ]
+    
+
+
 /*
 The continue and break statements are used within loop constructs 
 such as for, while, and do...while loops in JavaScript. 
@@ -8,8 +52,6 @@ They cannot be used inside array methods like forEach, map, filter, etc.,
 because these methods use callback functions, 
 not actual loop constructs.
 */
-
-
 
 
 /*
