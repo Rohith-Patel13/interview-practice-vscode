@@ -94,7 +94,55 @@ manner
 */
 
 
+/*
+event: signals that something has happened in program
+event emitter: create or emit events
+event queue: event emitted stored in queue
+event handler(event listener): functions that responds to specific events
+event loop: event loop picks up an event from event queue and executes them in the order they were added
+event driven architecture: operations in node are based on events
+*/
 
+
+/*
+Disadvantages of node.js:
+->node.js is not good for applications that involve heavy CPU Processing
+*/
+
+
+/*
+->node_modules folder contains all the dependencies of the node project.
+->npm stands for node package manager which is used to manage dependencies(node_modules folder) of
+your node project
+->package.json:- metadata of node project
+->Module In node: Module contains a specific functionality that can be easily reused within nodejs application
+and modules can contain multiple functions and variables
+*/
+
+
+/*
+exporting a module in different ways:-
+->module.exports object can be used to export the module.
+->exports object can be also used directly to export the module.
+*/
+
+// in nodejs you can use require function to import a module
+
+/*
+Module wrapper function:-
+->each module is wrapped in a function called the "module.wrapper function" before it is executed
+*/
+
+/*
+Types of modules in node:-
+1)Built-in Module(core modules):-Already present modules in node.js which provide essential functionalities
+example:-fs(file system),http(HTTP server),path(path manipulation),util(utils)
+
+2)Local modules:- user defined modules created by developers for specific functionalities
+3)Third-party modules:- external modules or libraries created by community and provide additional 
+functionalities for node projects.You can install third-party modules by using "npm install" command
+example:-npm install express
+*/
 
 
 const rd=(arr)=>{
