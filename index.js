@@ -1,5 +1,81 @@
 "use strict"
 
+/*
+Time Complexity:Number of executions taken by an algorithm
+->If code has constant operations the time complexity is O(1) ex:- 3 operations
+->If increase in constant way but not exponential way then the time complexity is O(n); ex:-2n+3 operations
+->If increase in exponential way then the time complexity is O(n2); ex:-n*n operations 
+->for sorting and searching algorithms time complexity is O(nlogn)
+*/
+
+
+/*
+Space Complexity:
+->For Primitive types like number,Boolean,undefined,null then the space complexity is Constant.
+->strings,arrays,objects has dynamic space complexity because they may change with input size
+*/
+
+
+// Write a JavaScript function to check if a given number is prime. 
+const isPrimeOrNotFunction=(number)=>{
+    if(number<2) return false
+    for(let i=2;i<number;i++){
+        if(number%i===0) return false
+    }
+    return true
+}
+console.log(isPrimeOrNotFunction(5)) // true
+console.log(isPrimeOrNotFunction(72)) // fals
+
+
+
+// Write a JavaScript program to calculate the factorial of a given number. 
+const factorialOfNumberFunction=(number)=>{
+    if(number===1) return 1
+    return number*factorialOfNumberFunction(number-1)
+}
+console.log(factorialOfNumberFunction(5)) // 120
+console.log(factorialOfNumberFunction(3)) // 6
+
+
+
+// Write a JavaScript program to find the maximum number in an array.
+const max=(arr)=>{
+    const maxValue=arr.reduce((a,c)=>{
+        return a>c?a:c
+    })
+    return maxValue
+}
+console.log(max([3,4,1,2,10,2,5])) // 10
+console.log(max([32,42,12,22,12,22,52])) // 52
+
+
+// Write a JavaScript function to check if a given string is a palindrome (reads the same forwards and backwards). 
+const isPalindromeFunction=(str)=>{
+    return str.split("").reverse().join("")===str
+}
+console.log(isPalindromeFunction("radar")) // true
+console.log(isPalindromeFunction("rador")) // false
+
+
+// Write a JavaScript program to reverse a given string. 
+const reverseFunction=(str)=>{
+    return str.split("").reverse().join("")
+}
+console.log(reverseFunction("kis")) // sik
+console.log(reverseFunction("sik")) // kis
+
+
+
+// Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers. 
+const arrOfEvenFunction=(arr)=>{
+    const arrOfEven = arr.filter((each)=>each%2===0)
+    return arrOfEven
+}
+console.log(arrOfEvenFunction([1,2,3,4,5,6,7,8])) // [2,4,6,8]
+console.log(arrOfEvenFunction([1,3,5,7,10,12,14,16])) // [ 10, 12, 14, 16 ]
+
+
 
 // second larget number in an array
 const SecondLargestNumber=(arr)=>{
@@ -7,7 +83,6 @@ const SecondLargestNumber=(arr)=>{
     return arr[1]
 }
 console.log(SecondLargestNumber([2,8,9,7])) // 8
-
 
 
 /*
@@ -477,18 +552,7 @@ const factorialOfANumber = (number)=>{
 console.log(factorialOfANumber(5))
 
 
-// prime or not
-const isPrimeOrNot = (number)=>{
-    if(number<2) return false
-    for(let i=2;i<number;i++){
-        if(number%i===0) return false
-    }
-    return true
-}
-console.log(isPrimeOrNot(1)) // false
-console.log(isPrimeOrNot(10)) // false
-console.log(isPrimeOrNot(7)) // true
-console.log(isPrimeOrNot(2)) // true
+
 
 
 const largestNumInArray = (arr)=>{
