@@ -1,6 +1,82 @@
 "use strict"
 
 /*
+What is the microservices architecture?
+Microservices architecture (often shortened to microservices) 
+refers to an architectural style for developing 
+applications. Microservices allow a large application to be 
+separated into smaller independent parts, with each part having 
+its own realm of responsibility.
+*/
+
+
+/*
+what is node.js?
+->node.js is neither a language nor a framework
+->node.js is a runtime environment for executing js code on server sid
+->node.js is responsible for converting
+high-level code to low-level code(machine understandable code)
+->express.js is framework for node.js and the role of
+framework is to simplify creation of large applications
+by providing many inbuilt and reusable libraries
+->express.js is responsible for http server functionalities like sending data to client
+->express.js framework built on top of node.js
+->express.js framework is designed to simplify
+the process of building web apps and Api's by 
+providing set of features like simple routing
+system,middleware support etc.
+*/
+
+
+/*
+how node is a runtime environment on server side? what is V8?
+-> javascript languages will run and executed by the browsers(client) like chrome
+-> Every browser(chrome) has javascript engine(V8) in it, 
+like chrome(browser) has V8 Engine(Javscript engine); edge(browser) had chakra(javascript engine) and 
+firefox(browser) has spider monkey(js engine)
+-> with node.js(server side) runtime environment javascript
+can run outside the browser also
+->As browser executes javascript on client side and
+we have node.js to execute javascript on server side
+*/
+
+
+/*
+Runtime Environment:-
+primarily focuses on providing the necessary
+infrastructure for code execution,including services
+like memory management and I/O operations
+
+Framework:-
+primarily focuses on simplifying the development
+process by offering a structured set of tools,
+libraries and best practices.
+*/
+
+
+/*
+Browser(chrome or edge or firefox) <--->  Client-side(React or Angular)  <--->   Server-side(Node.js with Express.js framework) <---> Database(Mongodb or SQLITE)
+*/
+
+
+
+
+
+
+const rd=(arr)=>{
+    let wd=[]
+    arr.forEach((each)=>{
+        if(wd.includes(each)) return
+        wd.push(each)
+    })
+    return wd
+}
+console.log(rd([1,2,3,1,2,3])) // [ 1, 2, 3 ]
+       
+
+
+
+/*
 for...in loop is used to loop through the properties of an object
 */
 const personOb = {
@@ -137,7 +213,6 @@ const isPrimeOrNot = (number)=>{
         if(number%i===0) return false
     }
     return true
-    
 }
 console.log(isPrimeOrNot(1)) // false
 console.log(isPrimeOrNot(10)) // false
