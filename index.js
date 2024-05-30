@@ -1,5 +1,17 @@
 "use strict"
 
+
+/*
+The continue and break statements are used within loop constructs 
+such as for, while, and do...while loops in JavaScript. 
+They cannot be used inside array methods like forEach, map, filter, etc., 
+because these methods use callback functions, 
+not actual loop constructs.
+*/
+
+
+
+
 /*
 What is the microservices architecture?
 Microservices architecture (often shortened to microservices) 
@@ -126,12 +138,18 @@ exporting a module in different ways:-
 ->exports object can be also used directly to export the module.
 */
 
+
+
 // in nodejs you can use require function to import a module
+
+
 
 /*
 Module wrapper function:-
 ->each module is wrapped in a function called the "module.wrapper function" before it is executed
 */
+
+
 
 /*
 Types of modules in node:-
@@ -144,15 +162,21 @@ functionalities for node projects.You can install third-party modules by using "
 example:-npm install express
 */
 
+
+
+
 /*
 Top built-in modules commonly used in node.js projects?
 1)fs, 2)path, 3)os, 4)events, 5)http
 */
 
+
+
 /*
 1)fs module:-
 ->fs module in node.js provides a set of methods for interacting with the file system, like methods are fs.readFile(),fs.writeFile(),fs.mkdir()
 example:-
+const fs = require("fs")
 fs.readFile("fs.txt","utf8",(err,data)=>{
     if(err){
         return;
@@ -168,6 +192,96 @@ fs.writeFile("fs.txt",contentToWrite,"utf8",(err)=>{
     console.log("write operation completed")
 })
 */
+
+
+
+/*
+2)path:-path module provide utilities for joining,resolving and manipulating paths
+ex:-
+const path = require("path");
+console.log(path.join("/docs","file.txt")) 
+output:- /docs/file.txt
+*/
+
+
+
+/*
+OS module:-set of methods for interacting with operating system
+ex-
+const os = require("os")
+console.log(os.type())
+*/
+
+
+
+
+/*
+Explain the role of events module? How to handle events in node?
+const EventEmitter = require("events");
+const myEmitter = new EventEmitter();
+myEmitter.on("eventName",()=>{console.log("event occurred")});
+myEmitter.emit("eventName");
+*/
+
+
+
+
+/*
+Event arguments:- additional data that can be passed along with the emitted event
+const EventEmitter = require("events")
+const myEmitter = new EventEmitter()
+myEmitter.on("eventName",(arg1,arg2)=>{console.log(arg1,arg2)})
+myEmitter.emit("eventName","Arg 1","Arg 2")
+*/
+
+
+
+
+/*
+Difference b/w function and event?
+function:- function is a reusable piece of code that performs a specific task when invoked or called.
+events:- events represent actions that can be observed and responded to,events will call functions internally
+*/
+
+
+
+/*
+http module:-
+->HTTP module can create http server that listens to server ports and gives a response back
+to the client.
+->createServer() method is used to create an http server
+
+example:-
+const http = require("http");
+const server = http.createServer();
+const port=9872;
+server.listen(port,()=>console.log(`server running at port number ${port}`))
+*/
+
+
+console.log(10+"10") // 1010
+console.log(10-"10") // 0
+
+
+
+
+// shallow copy 
+const arrScDc1 = [1,23,4]
+const arrScDc2 = arrScDc1 // shallow copy
+arrScDc2[1] = 2
+console.log(arrScDc1) // [1,2,4]
+console.log(arrScDc2) // [1,2,4]
+
+
+// deep copy
+const ardc1 = [1,23,4]
+const ardc2 = [...ardc1] // deep copy
+ardc2[1] = 2
+console.log(ardc1) // [1,23,4]
+console.log(ardc2) // [1,2,4]
+
+
+
 
 
 
