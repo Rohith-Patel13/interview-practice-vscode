@@ -1,6 +1,13 @@
 "use strict"
 
 
+// second larget number in an array
+const SecondLargestNumber=(arr)=>{
+    arr.sort((a,b)=>b-a) // [ 9, 8, 7, 2 ]
+    return arr[1]
+}
+console.log(SecondLargestNumber([2,8,9,7])) // 8
+
 
 
 /*
