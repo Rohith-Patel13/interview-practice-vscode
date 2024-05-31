@@ -1,5 +1,7 @@
 "use strict"
 
+// The "in" operator can also be used on an Array, since Arrays are technically Objects in JavaScript. 
+
 /*
 Time Complexity:Number of executions taken by an algorithm
 ->If code has constant operations the time complexity is O(1) ex:- 3 operations
