@@ -16,6 +16,105 @@ Space Complexity:
 */
 
 
+
+
+// Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
+/*
+Time Complexity:O(n)
+Space Complexity:O(n)
+*/
+const uniqueElsArray = (arr)=>{
+    console.log(new Set(arr)) // Set(5) { 1, 3, 5, 2, 0 }
+    return [...new Set(arr)]
+}
+console.log(uniqueElsArray([1,3,1,5,2,5,0])); // [ 1, 3, 5, 2, 0 ]
+
+
+
+
+// Given an array of numbers, write a function to find the largest and smallest numbers in the array. 
+/*
+Time Complexity:O(n), where n is the number of elements in the array.
+Space Complexity:O(1), constant space.
+*/
+const maxMinArray = (arr)=>{
+    return [Math.max(...arr),Math.min(...arr)]
+}
+console.log(maxMinArray([1,3,5,2,0])); // [ 5, 0 ]
+console.log(maxMinArray([12,3,4,1,5])); // [ 12, 1 ]
+
+
+
+
+// Implement a function to reverse a string without using the built-in reverse() method. 
+/*
+Time Complexity:O(n)
+Space Complexity:O(n)
+*/
+const reverseFuncArray = (str)=>{
+    let reverseString='';
+    for(let i=str.length-1;i>-1;i--){
+        reverseString+=str[i]
+    }
+    return reverseString
+}
+console.log(reverseFuncArray("madam sir")); // ris madam
+console.log(reverseFuncArray("silents")); // stnelis
+
+
+
+
+// Implement a function that flattens a nested array in JavaScript, converting it into a single-level array. 
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+const flattenArray = (nestedArray)=>{
+    return nestedArray.flat(Infinity); 
+}
+console.log(flattenArray([1, [2, [3, 4]], 5, [6]])); // Output: [1, 2, 3, 4, 5, 6]
+
+
+
+
+  
+
+
+// Implement a function that takes two sorted arrays and merges them into a single sorted array 
+const mergesortedArr=(arr1,arr2)=>{
+    return (
+        [...arr1,...arr2].sort((a,b)=>a-b)
+    )
+}
+console.log(mergesortedArr([1,3,5,7],[2,4,6,8]));// [1, 2, 3, 4,5, 6, 7, 8]
+
+
+
+
+// Write a function that takes an array of objects and a key, and returns a new array sorted based on the values of that key in ascending order. 
+/*
+Time Complexity: O(n log n), where n is the number of objects in the array.
+Space Complexity: O(n) 
+*/
+const sortByKey=(arrOfObjects,key)=>{
+    return (
+        arrOfObjects.sort((a,b)=>(a[key]-b[key]))
+    )
+}
+console.log(sortByKey([
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 },
+    { name: "Jim", age: 35 },
+    { name: "Jake", age: 28 }
+],"age")); // [{ name: 'Jane', age: 25 },{ name: 'Jake', age: 28 },{ name: 'John', age: 30 },{ name: 'Jim', age: 35 }]
+
+
+
+
+
+// Implement a debounce function in JavaScript that limits the frequency of a function’s execution when it’s called repeatedly within a specified time frame. 
+
+
 // Write a JavaScript program to convert a string to title case (capitalize the first letter of each word). 
 /*
 Time Complexity: O(n)
