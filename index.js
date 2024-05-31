@@ -18,6 +18,157 @@ Space Complexity:
 
 
 
+// Implement a function that merges two arrays into a single array, alternating elements from each array. 
+/*
+Time Complexity: O(n)
+Space Complexity: O(n) 
+*/
+const alternating = (arr1,arr2)=>{
+    const MaxLengthArr=Math.max(arr1.length,arr2.length)
+    let alternateMergedArray=[]
+    for(let i=0;i<MaxLengthArr;i++){
+        if(i<arr1.length){
+            alternateMergedArray.push(arr1[i])
+        }
+        if(i<arr2.length){
+            alternateMergedArray.push(arr2[i])
+        }
+    }
+    return alternateMergedArray
+}
+console.log(alternating([1, 2, 3],['a', 'b', 'c'])); // [1, 'a', 2, 'b', 3, 'c']
+console.log(alternating([1, 2],['a', 'b', 'c', 'd'])); // [1, 'a', 2, 'b', 'c', 'd']
+console.log(alternating([1, 2, 3, 4],['a', 'b'])); // [1, 'a', 2, 'b', 3, 4]
+
+
+
+
+// Write a function that removes all falsy values (false, null, 0, “”, undefined, and NaN) from an array. 
+/*
+Time Complexity: O(n)
+Space Complexity: O(n) 
+*/
+const removesAllFalsyValues = (arr)=>{
+    const falsyValues = [false,null,0,'',undefined,NaN];
+    return arr.filter((each)=>!falsyValues.includes(each))
+ }
+ console.log(removesAllFalsyValues([1,5,null,3,0,undefined])); // [ 1, 5, 3 ]
+ console.log(removesAllFalsyValues([false,1,5,"",4,NaN,8])); // [ 1, 5, 4, 8 ]
+ 
+
+
+
+// Implement a function that finds the index of a specific element in an array. If the element is not found, the function should return -1. 
+/*
+Time Complexity: O(n)
+Space Complexity: O(1) 
+*/
+const indexOfEl = (arr,el)=>{
+    return arr.indexOf(el)
+ }
+ console.log(indexOfEl([1,5,3],0));// -1
+ console.log(indexOfEl([1,5,3],5));// 1
+ console.log(indexOfEl([1,5,3],3));// 2
+ 
+
+
+
+
+// Write a function that sorts an array of strings in alphabetical order. 
+/*
+Time Complexity:O(n log n)
+Space Complexity: O(1) 
+*/
+const alphabeticalOrder = (arr)=>{
+    return arr.sort()
+ }
+ console.log(alphabeticalOrder(["banana", "apple", "cherry", "date"]
+ ));// ["apple", "banana", "cherry", "date"]
+ 
+ console.log(alphabeticalOrder(["zebra", "elephant", "giraffe", "lion"]
+ ));// ["elephant", "giraffe", "lion", "zebra"]
+ 
+ 
+ 
+ 
+
+
+
+// Write a function that generates a random alphanumeric string of a given length. 
+/*
+Time Complexity:O(n)
+Space Complexity: O(1) 
+*/
+const randomAlphaNumericStr = (length)=>{
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    let result=""
+    for(let i=0;i<length;i++){
+        const randomIndex = Math.floor(Math.random()*characters.length)
+        result+=characters[randomIndex]
+    }
+    return result
+}
+console.log(randomAlphaNumericStr(5));
+console.log(randomAlphaNumericStr(6));
+
+
+
+
+// Write a function that takes an array of integers and returns the largest difference between any two numbers in the array. 
+/*
+Time Complexity:O(n)
+Space Complexity: O(1) because the function does not use any additional data structures that grow with the size of the input array.
+*/
+const largestDiff = (arr)=>{
+    return Math.max(...arr)-Math.min(...arr)
+}
+console.log(largestDiff([1, 3, 6, 9, 5, 2])); // 8
+console.log(largestDiff([10, 7, 5, 8, 4, 9])); // 6
+
+
+
+
+// Write a function that reverses the order of words in a sentence without using the built-in reverse() method. 
+/*
+Time Complexity:O(n)
+Space Complexity:O(n)
+*/
+const reverseSentence = (sentence)=>{
+    let reversedArr=[]
+    for(let i=sentence.split(" ").length-1;i>-1;i--){
+        reversedArr.push(sentence.split(" ")[i])
+    }
+    return reversedArr.join(" ")
+}
+console.log(reverseSentence("hello How are you"));// you are How helloyou are How hello
+
+
+
+
+
+// Given a string, write a function to count the occurrences of each character in the string. 
+/*
+Time Complexity:O(n)
+Space Complexity:O(k)
+*/
+const OccurenceOfEachChar = (str)=>{
+    let countCharObj={}
+    for(let i of str){
+        // console.log(i in countCharObj,i)
+        if(i in countCharObj){
+            countCharObj[i] += 1; 
+        }else{
+             countCharObj[i]=1
+        }
+    }
+    return countCharObj
+}
+console.log(OccurenceOfEachChar("hello")); // { h: 1, e: 1, l: 2, o: 1 }
+
+
+
+
+
 // Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
 /*
 Time Complexity:O(n)
