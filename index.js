@@ -16,6 +16,48 @@ Space Complexity:
 */
 
 
+// Write a JavaScript program to convert a string to title case (capitalize the first letter of each word). 
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+const toTitleCase=(str)=>{
+    return str.split(" ").map((each)=>{
+        // console.log(each[0])
+        return each[0].toUpperCase()+each.slice(1)
+    }).join(" ")
+}
+console.log(toTitleCase("this is a sample string to be converted to title case.")); // This Is A Sample String To Be Converted To Title Case.
+
+
+
+// Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+const fibSequence=(number)=>{
+    if(number<2) return [0,1]
+    let firstTwoFibSequence = [0,1]
+    for(let i=2;i<number;i++){
+        firstTwoFibSequence[i]=firstTwoFibSequence[i-1]+firstTwoFibSequence[i-2]
+    }
+    return firstTwoFibSequence
+}
+console.log(fibSequence(1));// [ 0, 1 ]
+console.log(fibSequence(4));// [ 0, 1, 1, 2 ]
+
+
+
+// Write a JavaScript program to find the largest element in a nested array. 
+const largestInNestedArray = (nestedArray)=>{
+    // Unsolved
+    return nestedArray
+}
+console.log(largestInNestedArray([1, [2, 3], [4, [5, 6], 7], 8, [9, [10, [11, 12], 13], 14]]))
+
+
+
 // Write a JavaScript function to check if a given number is prime. 
 const isPrimeOrNotFunction=(number)=>{
     if(number<2) return false
