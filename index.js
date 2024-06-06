@@ -1,4 +1,107 @@
+
+
 "use strict"
+
+/*
+What is a CMS (Content Management System) Website?
+A CMS, or content management system, is just a software tool that allows users to 
+create and maintain websites without having to write them from scratch or even 
+knowing how to code at all. A CMS for website building allows you to create, 
+manage, revise, and publish information using an easy-to-use interface. 
+Rather than coding, you may change the style and functionality of your website 
+by downloading or purchasing themes and plugins. You may have numerous users 
+engaging in the same tool's backend, among other things.
+
+Platforms like Wordpress, Drupal, and Sitecore were designed to store and present 
+content elements like text, images, and video on websites specifically.
+
+Examples:-
+JOOMLA,WEBFLOW,WORDPRESS,GHOST,SITECORE,DRUPAL,MAGENTO
+
+The traditional CMS approach to managing content puts 
+everything into one big bucket — content, images, HTML, and CSS. 
+This made it impossible to reuse content because it was commingled with code.
+
+As digital channels and devices have evolved, the need for more flexible solutions 
+has emerged. Now, enterprises are developing websites, mobile apps, digital displays, 
+conversational interfaces, and more. Meanwhile, the traditional CMS failed to keep pace.
+Why? Because a CMS organizes content in webpage-oriented frameworks, making it impossible 
+for the same content to fit other digital platforms or software.
+*/
+
+
+
+
+/*
+Headless architecture defined
+Headless architecture describes a decoupled approach to building applications. 
+In this approach, the frontend of the application — the portion that dictates 
+user experience (i.e., what the end user can see and interact with) — is 
+separated from the backend — the server side of the application that dictates 
+structure, defines logic, and stores data. 
+
+With this decoupling, content, media, and anything else housed in the backend 
+is not restricted to a single device, layout, or channel. Rather, it can be 
+delivered to as many different frontends, or “heads,” as a business needs. 
+With this architecture, it’s possible to develop a web app and then ship 
+the same business logic and functions to another channel — say a 
+mobile app — where it can be enjoyed by users on the go without excess 
+developmental gymnastics. 
+
+If this definition inspires déjà vu, it might be because you’re familiar with 
+other, related frameworks, such as composable architecture, best of breed 
+architecture, microservice architecture, and microservice-based, API-first, 
+cloud-native, headless (MACH) architecture. All these terms describe a 
+single decoupled architecture, similar to headless architecture, that 
+prefers the use of tech stacks over suites. 
+
+key features of headless architecture
+1. It uses APIs to connect the front- and backends 
+While the front- and backends aren’t tightly coupled in headless architectures, 
+they do need to speak to one another, which is where APIs come in. Application 
+programming interfaces (APIs) are software intermediaries that enable 
+communication between applications. In the scope of headless architecture, 
+developers configure specific APIs, often REST APIs, to pass raw data, or 
+content, from backend business logic services to the frontend presentation layers. 
+
+Traditional content management systems, such as Drupal, WordPress, Adobe Experience Manager, 
+and Sitecore, which were built for a single use case — supporting tightly coupled 
+websites — are struggling to accommodate these new channels. With text, 
+digital assets, CSS, HTML, JavaScript, and other elements of a brand’s digital 
+experience and messaging designed for a single touchpoint — e.g., a blog post, 
+landing page, homepage — the opportunity to reuse content across new devices and 
+channels becomes a challenge.
+
+
+How does a headless CMS solution work?
+Content housed in a headless CMS is delivered via APIs for seamless display across 
+any site, device, or other digital touchpoint. This makes content in a headless CMS 
+endlessly reusable, no matter the omnichannel customer experience used today, or the 
+channels that emerge in the future. This is different from Wordpress and other monolithic 
+CMSes that tightly couple the frontend with the backend, keeping you locked into how content 
+can (and cannot) be displayed.
+
+Think about headless architecture and APIs like this: the main job of a headless CMS 
+is to store and manage your content. It doesn’t really care what you want to do with 
+that content. The main job of display platforms like a website or mobile app is to 
+present content to people. They don’t really care how that content is stored or managed. 
+APIs are the magical connection points that allow these backend systems (e.g., headless CMS) and 
+frontend systems (e.g., website) to communicate in the specific ways a digital team wants them to.
+
+Think about headless architecture and APIs like this: the main job of a headless CMS is to 
+store and manage your content. It doesn’t really care what you want to do with 
+that content. The main job of display platforms like a website or mobile app is 
+to present content to people. They don’t really care how that content is stored 
+or managed. APIs are the magical connection points that allow these backend 
+systems (e.g., headless CMS) and frontend systems (e.g., website) to communicate 
+in the specific ways a digital team wants them to.
+
+
+
+
+*/
+
+
 
 // The "in" operator can also be used on an Array, since Arrays are technically Objects in JavaScript. 
 
