@@ -2,6 +2,190 @@
 
 "use strict"
 
+
+
+/* 
+how to get rid of from call back hell?
+
+Callback hell, also known as the pyramid of doom, occurs when you have multiple 
+nested callbacks, making your code hard to read and maintain. Here are several 
+strategies to avoid callback hell in JavaScript:
+
+Promises:
+Promises provide a way to handle asynchronous operations in a more manageable way 
+than callbacks. They allow you to chain operations and handle errors more 
+gracefully.
+EX:-
+doSomething()
+  .then(result => {
+    return doSomethingElse(result);
+  })
+  .then(newResult => {
+    return doThirdThing(newResult);
+  })
+  .then(finalResult => {
+    console.log(finalResult);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+
+Async/Await:
+Async/await syntax, introduced in ES2017, makes it possible to write asynchronous 
+code that looks and behaves like synchronous code. This greatly improves 
+readability and maintainability.
+EX:-
+async function myFunction() {
+  try {
+    const result = await doSomething();
+    const newResult = await doSomethingElse(result);
+    const finalResult = await doThirdThing(newResult);
+    console.log(finalResult);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+myFunction();
+*/
+
+
+
+
+/*
+error firts call back
+*/
+
+
+
+
+/*
+REPL in node js
+*/
+
+
+
+/*
+Core modules in nodejs
+*/
+
+
+
+const i = 1;
+function test() {
+	console.log(i) // undefined
+	var i = 2
+}
+test();
+/*
+The output will be undefined.
+
+Here's an explanation of why this happens:
+
+Variable Hoisting: In JavaScript, variable declarations (using var) are hoisted 
+to the top of their scope. This means that the declaration part of var i is moved 
+to the top of the function test(), but not the assignment.
+
+Code Transformation: The test function can be conceptually transformed by hoisting 
+as follows:
+function test() {
+    var i; // declaration is hoisted to the top
+    console.log(i); // i is declared but not yet assigned, so it's undefined
+    i = 2; // assignment happens here
+}
+
+Execution Context: When console.log(i) is executed, the variable i within the 
+function scope is accessed. Since i is declared but not yet assigned at that point, 
+it is undefined.
+
+So, when test() is called, the following steps occur:
+
+The variable i is hoisted and declared at the top of the function scope.
+console.log(i) is executed, logging undefined since i is declared but not assigned a value yet.
+i is then assigned the value 2, but this happens after the console.log statement.
+Thus, the output is undefined.
+*/
+
+
+
+
+
+let j = 10;
+(function() {
+  const j = 5;
+})();
+console.log(j);// 10
+/*
+The output will be 10.
+
+Here's an explanation:
+
+Block Scope with let and const: The variable j is declared in the global scope 
+with let and assigned the value 10.
+IIFE (Immediately Invoked Function Expression): The function (() => { const j = 5; })() 
+is an IIFE, which means it is executed immediately after it is defined.
+Local Scope within IIFE: Inside the IIFE, a new variable j is declared using 
+const and assigned the value 5. This j is scoped to the function and does not 
+affect the j declared in the global scope.
+Accessing the Global j: After the IIFE is executed, the global variable j 
+remains unchanged and retains its value of 10.
+Thus, when console.log(j) is executed, it refers to the global j, which is 10.
+
+So, the output is 10.
+*/
+
+ 
+
+
+
+
+/*
+Headless commerce explained
+As defined above, headless commerce works by separating the user interface (frontend) 
+from the software, which does all the processing (backend). The headless commerce 
+platform is just the backend part, with some way to connect one or more user interfaces. 
+This connection is generally made through APIs, and because this provides a generic 
+interface to the platform, any frontend can be built to connect to it. 
+
+
+Headless commerce works by separating the user interface (frontend) from the software, 
+which does all the processing (backend), with a connection between the two 
+generally made through APIs
+
+A user then interacts with a frontend running in a web browser, 
+a mobile application, kiosk, or any other digital interface, which then, 
+in turn, communicates with the backend. 
+*/
+
+
+
+/*
+Monolithic software – Applications where all of the code for the user interface 
+and data access are combined. 
+
+Application Programming Interface (API) – A connection allowing applications to interact 
+with one another and set of functions that can be called to access data or trigger actions, 
+e.g., return product data or make a purchase. 
+
+RESTful – An architecture for web services such as APIs which permits requests through 
+uniform resource identifiers (URIs) to retrieve all of the information necessary 
+without storing client state on the server.4
+
+Microservice architecture – A structural style that arranges applications as a 
+collection of loosely coupled services.
+
+
+Loose coupling – Where different combined services have as little dependency on 
+each other as possible, e.g., a change in one service doesn’t require all others 
+to be updated. 
+
+
+Omnichannel – The practice of utilizing numerous channels of interaction for the creation 
+of a consistent customer experience across web, app, email, call center, in-store, and so on. 
+*/
+
+
 /*
 What is a CMS (Content Management System) Website?
 A CMS, or content management system, is just a software tool that allows users to 
@@ -95,9 +279,6 @@ to present content to people. They don’t really care how that content is store
 or managed. APIs are the magical connection points that allow these backend 
 systems (e.g., headless CMS) and frontend systems (e.g., website) to communicate 
 in the specific ways a digital team wants them to.
-
-
-
 
 */
 
