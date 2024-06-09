@@ -2,6 +2,72 @@
 
 "use strict"
 
+/*
+JAMstack is a modern web development architecture based on client-side JavaScript, 
+reusable APIs, and pre-built Markup. The acronym stands for:
+JavaScript: Dynamic functionalities are handled by JavaScript, running entirely on the client-side.
+APIs: Server-side operations are abstracted into reusable APIs, accessed over HTTP with JavaScript. These can be third-party services or custom-built.
+Markup: Websites are pre-built at deploy time, using static site generators for better performance and security.
+Security: Reduced attack surface as there are no servers or databases to compromise.
+
+
+
+Headless CMS: Concept and Benefits
+A Headless CMS is a content management system where the front-end and back-end are 
+decoupled. The CMS focuses on content creation and management, providing content 
+through an API to any front-end or device.
+Benefits:
+Flexibility: Content can be delivered to multiple platforms (web, mobile, IoT, etc.).
+Scalability: Separating the front-end from the back-end allows for easier scaling 
+and maintenance.
+Faster Development: Teams can work on front-end and back-end independently, 
+accelerating the development process.
+
+
+
+
+Headless Commerce: Concept and Benefits
+Headless Commerce decouples the e-commerce platform's front-end from its back-end, 
+similar to a headless CMS. The commerce functionalities are provided via APIs, 
+allowing for more flexibility in how products are displayed and interacted with 
+on different devices.
+Benefits:
+Personalization: Easily create personalized shopping experiences across different touchpoints.
+Flexibility: Freedom to build unique front-end experiences without being restricted by the back-end platform.
+Faster Time to Market: Quickly deploy new features and updates independently on the front-end.
+
+
+
+
+
+Directus CMS is an open-source headless CMS and Data Platform. 
+It allows users to connect to any SQL database and instantly get an API 
+and a dynamic app for managing its contents.
+Key Features:
+Database Agnostic: Works with any SQL database.
+Customizable: Tailor the admin app to fit specific project needs.
+API-first: Provides both RESTful and GraphQL APIs.
+User Management: Role-based access control for different user types.
+Open Source: Completely free and open-source with a strong community.
+Combining the utility of a Headless CMS with the power of a Backend-as-a-Service, 
+Directus handles APIs, Auth, Admin, and more so you can focus on building amazing 
+apps and websites. 
+
+
+
+Medusa JS is an open-source headless commerce engine built with JavaScript. 
+It provides the tools necessary to create scalable and customizable e-commerce 
+platforms.
+Key Features:
+Modular Architecture: Highly customizable with a plug-and-play approach.
+API-first: Provides a set of REST APIs and webhooks.
+Developer-friendly: Built with modern JavaScript tools and frameworks.
+Scalable: Designed to handle large scale e-commerce operations.
+Community-driven: Open-source with active contributions from the developer community.
+Medusa is a modular ecommerce platform with a built-in server framework to help 
+you build customizations.
+*/
+
 
 
 /* 
