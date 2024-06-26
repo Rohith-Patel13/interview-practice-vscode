@@ -3,6 +3,11 @@
 "use strict"
 
 
+/*
+In TypeScript, the extends keyword is used to create a new interface that inherits properties from an existing interface. This means that the new interface will include all the properties of the existing interface, plus any additional properties you may define.
+*/
+
+
 /* 
 how to get rid of from call back hell?
 
