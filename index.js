@@ -3,6 +3,36 @@
 "use strict"
 
 /*
+The TypeScript notation sortKeys: { [key: string]: string }; is used to define an object type where the keys are strings and the values are also strings. This is known as an index signature.
+
+Explanation
+sortKeys: This is the name of the property.
+{ [key: string]: string }: This is the type of the sortKeys property, which means:
+[key: string]: The object can have any number of properties, and the keys of these properties are strings.
+string: The values associated with these keys are strings.
+Example
+Here’s an example to illustrate how this works:
+class ExampleClass {
+  sortKeys: { [key: string]: string };
+
+  constructor() {
+    this.sortKeys = {
+      key1: "value1",
+      key2: "value2",
+      anyOtherKey: "someValue"
+    };
+  }
+}
+
+const example = new ExampleClass();
+console.log(example.sortKeys.key1); // Output: value1
+console.log(example.sortKeys.key2); // Output: value2
+console.log(example.sortKeys.anyOtherKey); // Output: someValue
+*/
+
+
+
+/*
 In TypeScript, implements and extends are used to achieve different forms of class relationships. Here's a breakdown of the differences between the two:
 
 extends
