@@ -2,6 +2,51 @@
 
 "use strict"
 
+/*
+In TypeScript, implements and extends are used to achieve different forms of class relationships. Here's a breakdown of the differences between the two:
+
+extends
+Purpose: Used to create a subclass (derived class) that inherits properties and methods from a superclass (base class).
+Functionality: The subclass can use and override methods and properties from the superclass.
+Usage: When you want to reuse functionality from an existing class.
+ex:-
+class Animal {
+  move() {
+    console.log("Moving along!");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Woof! Woof!");
+  }
+}
+
+const dog = new Dog();
+dog.move(); // Moving along!
+dog.bark(); // Woof! Woof!
+
+
+
+implements
+Purpose: Used to ensure that a class adheres to a specific interface by implementing all its properties and methods.
+Functionality: The class must provide concrete implementations for all properties and methods defined in the interface.
+Usage: When you want to enforce a certain structure or contract for a class.
+ex:-
+interface Flyer {
+  fly(): void;
+}
+
+class Bird implements Flyer {
+  fly() {
+    console.log("Flying high!");
+  }
+}
+
+const bird = new Bird();
+bird.fly(); // Flying high!
+*/
+
 
 /*
 In TypeScript, the extends keyword is used to create a new interface that inherits properties from an existing interface. This means that the new interface will include all the properties of the existing interface, plus any additional properties you may define.
